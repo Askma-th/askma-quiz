@@ -1,0 +1,91 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../components/BaseLayout.astro';
+
+const quizzes = await getCollection('quizzes', ({ data }) => data.isPublished);
+---
+
+<BaseLayout
+  title="Askma Quiz — แบบทดสอบบุคลิกภาพ"
+  description="คอลเลกชั่นแบบทดสอบบุคลิกภาพจาก Askma"
+>
+  <main class="hub-container">
+    <header>
+      <h1>Askma Quiz</h1>
+      <p>คอลเลกชั่นแบบทดสอบสไตล์ Askma</p>
+    </header>
+
+    <div class="quiz-grid">
+      {quizzes.map(quiz => (
+        <a href={`/${quiz.id.replace(/\.json$/, '')}`} class="quiz-card">
+          <div class="emoji">{quiz.data.emoji}</div>
+          <h2>{quiz.data.title}</h2>
+          <p>{quiz.data.description}</p>
+          <span class="meta">⏱ {quiz.data.estimatedMinutes} นาที</span>
+        </a>
+      ))}
+    </div>
+  </main>
+
+  <style>
+    .hub-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3rem 1rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: var(--accent);
+      margin: 0 0 0.5rem 0;
+    }
+
+    .quiz-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .quiz-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .quiz-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+
+    .quiz-card .emoji {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .quiz-card h2 {
+      font-size: 1.25rem;
+      margin: 0 0 0.5rem 0;
+      color: var(--text);
+    }
+
+    .quiz-card p {
+      color: var(--text-muted);
+      margin: 0 0 1rem 0;
+      font-size: 0.9rem;
+    }
+
+    .meta {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</BaseLayout>
