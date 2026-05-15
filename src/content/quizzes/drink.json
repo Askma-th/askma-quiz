@@ -1,0 +1,167 @@
+{
+  "isPublished": true,
+  "title": "คุณเป็นเครื่องดื่มอะไร?",
+  "titleEn": "What Drink Are You?",
+  "description": "ค้นหาตัวตนของคุณผ่าน 10 คำถามง่ายๆ",
+  "descriptionEn": "Discover your personality through 10 fun questions",
+  "emoji": "☕",
+  "accentColor": "#c8834a",
+  "estimatedMinutes": 2,
+  "publishedAt": "2026-05-15",
+  "ogTitle": "ฉันได้ ☕ กาแฟดำ! คุณล่ะเป็นเครื่องดื่มอะไร?",
+  "ogDescription": "ทำ quiz นี้แล้วรู้เลยว่าคุณเป็นเครื่องดื่มอะไร",
+  "ogImage": "/og/krueang-deum.png",
+  "theme": {
+    "accentColor": "#c8834a",
+    "bgGradient": "135deg, #1a0e08, #2a1a0e",
+    "ambientEmojis": ["☕", "🍵", "🍃", "🥤"],
+    "imageZoneEmojis": ["☕", "🍵", "🍃", "🥤"]
+  },
+  "resultTypes": [
+    {
+      "key": "coffee",
+      "label": "☕ COFFEE",
+      "title": "กาแฟดำสุดคลาสสิก",
+      "personality": "\"ตรงไปตรงมา ไม่ต้องการความหวาน\"",
+      "description": "คุณคือคนที่รู้ว่าตัวเองต้องการอะไร ไม่ชอบอ้อมค้อม ตื่นเช้า ทำงานเร็ว และไม่เสียเวลากับสิ่งที่ไม่จำเป็น\n\nคนรอบข้างรู้ว่าถ้าต้องการคำตอบตรงๆ ต้องมาถามคุณ",
+      "strengths": ["⚡ พลังงานสูง — ไม่หยุดพัก", "🎯 โฟกัสชัด — ไม่ออกนอกเรื่อง", "💪 น่าเชื่อถือ — พูดแล้วทำ"],
+      "cta": "Askma คือกาแฟดำของโลก social media\n\nตรง ไม่มีน้ำตาล ไม่มีโฆษณา\n\n☕ ตอบแบบสำรวจตรงๆ ได้คะแนนสะสมในอนาคต\n🔒 익명 100% — พูดความจริงได้ไม่ต้องกลัว\n✅ PDPA Compliant",
+      "shareText": "ฉันได้ ☕ กาแฟดำสุดคลาสสิก! ตรงไปตรงมา ไม่ต้องการความหวาน\nคุณล่ะเป็นเครื่องดื่มอะไร? มาลองดูกัน!"
+    },
+    {
+      "key": "tea",
+      "label": "🍵 TEA",
+      "title": "ชาร้อนอบอุ่น",
+      "personality": "\"สงบ ใจเย็น มองการณ์ไกล\"",
+      "description": "คุณไม่รีบ แต่ไม่ได้ช้า คุณรอจังหวะที่ใช่แล้วค่อยเคลื่อนไหว เหมือนชาที่ต้องใช้เวลาชงให้ได้รสชาติที่สมบูรณ์\n\nคนรอบข้างรู้สึกสงบเมื่ออยู่ใกล้คุณ",
+      "strengths": ["🌊 ใจเย็น — ไม่ตื่นตระหนก", "🔭 มองไกล — คิดก่อนทำ", "🤝 น่าไว้วางใจ — คนชอบปรึกษา"],
+      "cta": "Askma ออกแบบมาสำหรับคนใจเย็นอย่างคุณ\n\nไม่ต้องรีบ ตอบเมื่อพร้อม\n\n🍵 สะสมแต้มทุกครั้งที่ตอบในอนาคต\n🔒 익명 — ความเห็นของคุณปลอดภัย\n✅ PDPA Compliant",
+      "shareText": "ฉันได้ 🍵 ชาร้อนอบอุ่น! สงบ ใจเย็น มองการณ์ไกล\nคุณล่ะเป็นเครื่องดื่มอะไร? มาลองดูกัน!"
+    },
+    {
+      "key": "matcha",
+      "label": "🍃 MATCHA",
+      "title": "มัทฉะสายเฮลท์ตี้",
+      "personality": "\"ทำอะไรก็ต้องมีความหมาย\"",
+      "description": "คุณไม่ทำอะไรแบบสุกเอาเผากิน ทุกอย่างต้องมีเหตุผลและผลดีต่อชีวิต คุณชอบ trend ใหม่ๆ แต่ต้องผ่านการตรวจสอบข้อมูลก่อนเสมอ\n\nเป็น early adopter ที่ฉลาด ไม่ใช่แค่ตาม trend",
+      "strengths": ["🌱 Conscious — ตัดสินใจด้วยข้อมูล", "✨ Trendy แต่มีเหตุผล", "📚 ใฝ่รู้ — ชอบเรียนสิ่งใหม่"],
+      "cta": "Askma คือแอปสำรวจที่ทำมาอย่างมีความหมาย\n\nทุกคำถามมีวัตถุประสงค์ชัดเจน\n\n🍃 ข้อมูลของคุณถูกใช้เพื่อการวิจัยจริงๆ\n🔒 익명 — privacy first\n✅ PDPA Compliant",
+      "shareText": "ฉันได้ 🍃 มัทฉะสายเฮลท์ตี้! ทำอะไรก็ต้องมีความหมาย\nคุณล่ะเป็นเครื่องดื่มอะไร? มาลองดูกัน!"
+    },
+    {
+      "key": "smoothie",
+      "label": "🥤 SMOOTHIE",
+      "title": "สมูทตี้สีสันสดใส",
+      "personality": "\"สนุก ยืดหยุ่น ชอบลองสิ่งใหม่\"",
+      "description": "คุณคือคนที่ทำให้ทุกอย่างสนุกขึ้น มีพลังงาน ชอบลอง ชอบผสม ชอบ surprise คนอื่น\n\nไม่มีสูตรตายตัว ชีวิตคือการทดลองหาสิ่งที่ดีที่สุด",
+      "strengths": ["🎨 Creative — ไม่ยึดติดสูตรเดิม", "😄 สนุก — ทำให้คนรอบข้างมีความสุข", "🔄 Adaptable — ปรับตัวได้ทุกสถานการณ์"],
+      "cta": "Askma มีหลากหลายแบบสำรวจให้ลองเหมือนสมูทตี้หลาย flavor\n\nเลือกตอบได้ตามอารมณ์\n\n🥤 ยิ่งตอบหลายหัวข้อ ยิ่งได้แต้มสะสมมากในอนาคต\n🔒 익명 100%\n✅ PDPA Compliant",
+      "shareText": "ฉันได้ 🥤 สมูทตี้สีสันสดใส! สนุก ยืดหยุ่น ชอบลองสิ่งใหม่\nคุณล่ะเป็นเครื่องดื่มอะไร? มาลองดูกัน!"
+    }
+  ],
+  "tiebreakerOrder": ["coffee", "matcha", "tea", "smoothie"],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "ตื่นเช้ามาสิ่งแรกที่อยากทำคือ:",
+      "options": [
+        { "text": "ชงกาแฟทันที ยังไม่ตื่นถ้าไม่มีกาแฟ", "scores": { "coffee": 3, "tea": 0, "matcha": 1, "smoothie": 0 } },
+        { "text": "ต้มน้ำร้อนช้าๆ ชงชาสักถ้วย", "scores": { "coffee": 0, "tea": 3, "matcha": 1, "smoothie": 0 } },
+        { "text": "ปั่น smoothie สุขภาพรอไว้แล้ว", "scores": { "coffee": 0, "tea": 0, "matcha": 2, "smoothie": 3 } },
+        { "text": "แล้วแต่วัน ชอบ variety", "scores": { "coffee": 1, "tea": 1, "matcha": 1, "smoothie": 2 } }
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "เพื่อนชวนไปกินข้าว คุณตอบ:",
+      "options": [
+        { "text": "โอเค บอกเวลามา", "scores": { "coffee": 3, "tea": 0, "matcha": 0, "smoothie": 2 } },
+        { "text": "ได้เลย ไปที่ไหนดี?", "scores": { "coffee": 1, "tea": 1, "matcha": 0, "smoothie": 3 } },
+        { "text": "เดี๋ยวดูตารางก่อนนะ", "scores": { "coffee": 0, "tea": 3, "matcha": 2, "smoothie": 0 } },
+        { "text": "ร้านนั้น healthy ไหม?", "scores": { "coffee": 0, "tea": 1, "matcha": 3, "smoothie": 1 } }
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "งานเข้ามากะทันหัน คุณ:",
+      "options": [
+        { "text": "จัดการทันที ไม่รอ", "scores": { "coffee": 3, "tea": 0, "matcha": 1, "smoothie": 1 } },
+        { "text": "วางแผนก่อนแล้วค่อยทำ", "scores": { "coffee": 0, "tea": 2, "matcha": 3, "smoothie": 0 } },
+        { "text": "ทำไปด้วยฟังเพลงไปด้วย", "scores": { "coffee": 1, "tea": 1, "matcha": 0, "smoothie": 3 } },
+        { "text": "หายใจลึกๆ แล้วค่อยเริ่ม", "scores": { "coffee": 0, "tea": 3, "matcha": 1, "smoothie": 0 } }
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "วันหยุดในฝัน:",
+      "options": [
+        { "text": "เดินทางไปที่ใหม่ๆ ให้ได้", "scores": { "coffee": 2, "tea": 0, "matcha": 1, "smoothie": 3 } },
+        { "text": "อยู่บ้าน อ่านหนังสือ ไม่รีบ", "scores": { "coffee": 0, "tea": 3, "matcha": 1, "smoothie": 0 } },
+        { "text": "ออกกำลังกาย แล้วทำอาหาร healthy", "scores": { "coffee": 1, "tea": 0, "matcha": 3, "smoothie": 2 } },
+        { "text": "นัดเพื่อนทำกิจกรรมสนุกๆ", "scores": { "coffee": 2, "tea": 1, "matcha": 0, "smoothie": 3 } }
+      ]
+    },
+    {
+      "id": "q5",
+      "question": "คนรู้จักบอกว่าคุณ:",
+      "options": [
+        { "text": "ตรงไปตรงมา บางทีตรงเกินไป", "scores": { "coffee": 3, "tea": 0, "matcha": 1, "smoothie": 0 } },
+        { "text": "สงบ ใจเย็น คุยด้วยสบายใจ", "scores": { "coffee": 0, "tea": 3, "matcha": 1, "smoothie": 1 } },
+        { "text": "มีระเบียบ ชอบทำอะไรถูกต้อง", "scores": { "coffee": 1, "tea": 1, "matcha": 3, "smoothie": 0 } },
+        { "text": "สนุกสนาน ไม่ซีเรียส", "scores": { "coffee": 1, "tea": 0, "matcha": 0, "smoothie": 3 } }
+      ]
+    },
+    {
+      "id": "q6",
+      "question": "เวลาตัดสินใจซื้อของ:",
+      "options": [
+        { "text": "เห็นแล้วชอบก็ซื้อเลย", "scores": { "coffee": 3, "tea": 0, "matcha": 0, "smoothie": 2 } },
+        { "text": "ค่อยๆ คิด ไม่รีบ", "scores": { "coffee": 0, "tea": 3, "matcha": 1, "smoothie": 0 } },
+        { "text": "รีวิวก่อน ดู ingredient ก่อน", "scores": { "coffee": 0, "tea": 1, "matcha": 3, "smoothie": 1 } },
+        { "text": "ถามเพื่อนก่อนว่าใครเคยลองไหม", "scores": { "coffee": 1, "tea": 0, "matcha": 1, "smoothie": 3 } }
+      ]
+    },
+    {
+      "id": "q7",
+      "question": "ในกลุ่มเพื่อน คุณมักจะเป็น:",
+      "options": [
+        { "text": "คนที่ตัดสินใจว่าจะไปไหน", "scores": { "coffee": 3, "tea": 0, "matcha": 1, "smoothie": 1 } },
+        { "text": "คนที่ฟังทุกคนและสรุป", "scores": { "coffee": 0, "tea": 3, "matcha": 2, "smoothie": 0 } },
+        { "text": "คนที่เสนอ option ใหม่ๆ เสมอ", "scores": { "coffee": 1, "tea": 0, "matcha": 2, "smoothie": 3 } },
+        { "text": "คนที่ทำให้บรรยากาศสนุก", "scores": { "coffee": 1, "tea": 1, "matcha": 0, "smoothie": 3 } }
+      ]
+    },
+    {
+      "id": "q8",
+      "question": "เวลา stress คุณจัดการยังไง:",
+      "options": [
+        { "text": "ทำงานต่อ ถ้ายุ่งอยู่ไม่มีเวลา stress", "scores": { "coffee": 3, "tea": 0, "matcha": 0, "smoothie": 1 } },
+        { "text": "หาที่เงียบๆ นั่งสักพัก", "scores": { "coffee": 0, "tea": 3, "matcha": 1, "smoothie": 0 } },
+        { "text": "ออกกำลังกาย หรือ meditate", "scores": { "coffee": 0, "tea": 1, "matcha": 3, "smoothie": 1 } },
+        { "text": "หาเพื่อนคุย หรือออกไปข้างนอก", "scores": { "coffee": 1, "tea": 0, "matcha": 0, "smoothie": 3 } }
+      ]
+    },
+    {
+      "id": "q9",
+      "question": "เป้าหมายชีวิตที่คุณ relate มากที่สุด:",
+      "options": [
+        { "text": "ประสบความสำเร็จ มีผลงานที่ภูมิใจ", "scores": { "coffee": 3, "tea": 0, "matcha": 2, "smoothie": 0 } },
+        { "text": "มีสมดุล สงบสุข ไม่เครียด", "scores": { "coffee": 0, "tea": 3, "matcha": 1, "smoothie": 1 } },
+        { "text": "มีสุขภาพดี อายุยืน", "scores": { "coffee": 0, "tea": 1, "matcha": 3, "smoothie": 2 } },
+        { "text": "มีประสบการณ์หลากหลาย ไม่เบื่อ", "scores": { "coffee": 1, "tea": 0, "matcha": 0, "smoothie": 3 } }
+      ]
+    },
+    {
+      "id": "q10",
+      "question": "ถ้าชีวิตเป็นเครื่องดื่ม คุณอยากให้มันเป็นแบบไหน? (คำถามพิเศษ)",
+      "isMeta": true,
+      "weightBonus": 2,
+      "options": [
+        { "text": "เข้มข้น ชัดเจน ไม่จืด", "scores": { "coffee": 3, "tea": 0, "matcha": 1, "smoothie": 0 } },
+        { "text": "อบอุ่น สม่ำเสมอ ไม่ร้อนไม่เย็น", "scores": { "coffee": 0, "tea": 3, "matcha": 0, "smoothie": 1 } },
+        { "text": "ดีต่อสุขภาพ มีคุณค่า", "scores": { "coffee": 0, "tea": 1, "matcha": 3, "smoothie": 1 } },
+        { "text": "สีสัน หลากหลาย ไม่ซ้ำ", "scores": { "coffee": 1, "tea": 0, "matcha": 0, "smoothie": 3 } }
+      ]
+    }
+  ]
+}

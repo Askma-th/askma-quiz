@@ -55,6 +55,16 @@ const quizzes = defineCollection({
 
     // Tiebreaker priority order
     tiebreakerOrder: z.array(z.string()).min(2),
+
+    // Visual theme (optional per quiz)
+    theme: z
+      .object({
+        accentColor: z.string().default('#FFD600'),
+        bgGradient: z.string().default('135deg, #0d1a0d, #1a2a1a'),
+        ambientEmojis: z.array(z.string()).default([]),
+        imageZoneEmojis: z.array(z.string()).default([]),
+      })
+      .optional(),
   }),
 });
 

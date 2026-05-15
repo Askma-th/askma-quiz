@@ -1,0 +1,167 @@
+{
+  "isPublished": true,
+  "title": "คุณเป็นคนช่วงเวลาไหน?",
+  "titleEn": "What Time of Day Are You?",
+  "description": "ค้นพบว่าคุณ peak ตอนไหนของวัน",
+  "descriptionEn": "Discover when you are at your best",
+  "emoji": "🌅",
+  "accentColor": "#f97316",
+  "estimatedMinutes": 2,
+  "publishedAt": "2026-05-15",
+  "ogTitle": "ฉันได้ 🌅 คนยามเช้า! คุณล่ะเป็นช่วงเวลาไหน?",
+  "ogDescription": "ทำ quiz นี้แล้วรู้เลยว่าคุณ peak ช่วงเวลาไหนของวัน",
+  "ogImage": "/og/chuang-wela.png",
+  "theme": {
+    "accentColor": "#f97316",
+    "bgGradient": "135deg, #1a0e00, #2a1a08",
+    "ambientEmojis": ["🌅", "⭐", "🌙", "☀️"],
+    "imageZoneEmojis": ["🌅", "☀️", "🌆", "🌙"]
+  },
+  "resultTypes": [
+    {
+      "key": "morning",
+      "label": "🌅 MORNING",
+      "title": "คนยามเช้า",
+      "personality": "\"ตื่นเช้า คิดชัด ทำทุกอย่างสำเร็จก่อนคนอื่น\"",
+      "description": "คุณคือคนที่มีพลังงานสูงสุดตอนเช้า ทำงานสำคัญเสร็จก่อน 10 โมง แล้วบ่ายๆ ก็เริ่มหมดแบต\n\nเพื่อนมักแปลกใจว่าคุณทำงานเสร็จได้ยังไงเยอะขนาดนั้น",
+      "strengths": ["🌄 ตื่นตัวตอนเช้า — brain ทำงานสุดๆ", "✅ ทำงานเสร็จเร็ว — ก่อนคนอื่นตื่น", "🎯 มีวินัย — นอนเร็ว ตื่นเร็วสม่ำเสมอ"],
+      "cta": "Askma เปิดตลอด 24 ชั่วโมง ตอบตอนเช้าก็ได้\n\nแบบสำรวจใหม่ๆ รอคุณทุกเช้า\n\n🌅 เริ่มวันด้วยการแสดงความคิดเห็น\n💰 สะสมแต้มได้ในอนาคต\n✅ PDPA Compliant",
+      "shareText": "ฉันได้ 🌅 คนยามเช้า! ตื่นเช้า คิดชัด ทำทุกอย่างสำเร็จก่อนคนอื่น\nคุณล่ะเป็นช่วงเวลาไหน? มาลองดูกัน!"
+    },
+    {
+      "key": "afternoon",
+      "label": "☀️ AFTERNOON",
+      "title": "คนยามบ่าย",
+      "personality": "\"Warm up ช้า แต่พอติดแล้วหยุดไม่ได้\"",
+      "description": "คุณไม่ได้เป็นคนเช้า แต่พอสาย 10 โมงขึ้นไป เครื่องเริ่มติด และบ่ายๆ คือช่วงที่คุณทำงานได้ดีที่สุด\n\nคุณเป็น steady performer ที่ไม่ขึ้นๆ ลงๆ ตามอารมณ์",
+      "strengths": ["☀️ Consistent — ผลงานสม่ำเสมอทุกวัน", "🔄 Sustainable — ไม่หมดพลังเร็ว", "🤝 Sociable — พร้อมคุยและทำงานร่วมกัน"],
+      "cta": "Askma มีแบบสำรวจรอคุณทุกช่วงเวลา\n\nตอบตอนบ่ายก็ได้ ไม่มีหมดอายุ\n\n☀️ แบบสำรวจอัพเดทตลอด ไม่เบื่อ\n💰 สะสมแต้มได้ในอนาคต\n✅ PDPA Compliant",
+      "shareText": "ฉันได้ ☀️ คนยามบ่าย! Warm up ช้า แต่พอติดแล้วหยุดไม่ได้\nคุณล่ะเป็นช่วงเวลาไหน? มาลองดูกัน!"
+    },
+    {
+      "key": "evening",
+      "label": "🌆 EVENING",
+      "title": "คนยามเย็น",
+      "personality": "\"Social butterfly ที่มีพลังสูงสุดตอนเย็น\"",
+      "description": "คุณคือคนที่มีพลังงานพุ่งขึ้นพอดีตอนเย็น เหมาะกับการนัดเจอเพื่อน ออกกำลังกาย หรือ brainstorm\n\nเช้าๆ คุณอาจดูง่วง แต่พอเย็นมาทุกคนตามไม่ทัน",
+      "strengths": ["🌆 พลังงานพุ่งตอนเย็น — ทุกคนง่วงแต่คุณไม่", "👥 Socially energized — ยิ่งเจอคนยิ่งมีแรง", "🎉 Fun to be around — บรรยากาศดีขึ้นเมื่อคุณมา"],
+      "cta": "Askma รอคุณตอนเย็นเสมอ\n\nหลังเลิกงานตอบแบบสำรวจ สนุกกว่า scroll ทั่วไป\n\n🌆 Community ขนาดใหญ่ของคนที่คิดเหมือนคุณ\n💰 สะสมแต้มได้ในอนาคต\n✅ PDPA Compliant",
+      "shareText": "ฉันได้ 🌆 คนยามเย็น! Social butterfly ที่มีพลังสูงสุดตอนเย็น\nคุณล่ะเป็นช่วงเวลาไหน? มาลองดูกัน!"
+    },
+    {
+      "key": "midnight",
+      "label": "🌙 MIDNIGHT",
+      "title": "คนยามดึก",
+      "personality": "\"ความคิดสร้างสรรค์บานสะพรั่งหลังเที่ยงคืน\"",
+      "description": "ตอนที่คนอื่นหลับ คุณเพิ่งเริ่ม flow ที่ดีที่สุด ความคิดสร้างสรรค์ การแก้ปัญหา ไอเดียใหม่ๆ ล้วนมาตอนดึก\n\nคุณอาจตื่นยาก แต่ผลงานดึกๆ ของคุณมักออกมาดีที่สุด",
+      "strengths": ["🌙 Creative peak ตอนดึก — ไอเดียไหลลื่น", "🔮 Deep thinker — คิดลึกเมื่อโลกเงียบ", "🎨 ผลงานมีเอกลักษณ์ — ไม่เหมือนใคร"],
+      "cta": "Askma เปิดตลอด รอคุณตอนดึกด้วย\n\nแบบสำรวจไม่มีหมดอายุ ตอบตอนไหนก็ได้\n\n🌙 คนดึกมักเห็นมุมมองที่คนอื่นมองข้าม\n💰 สะสมแต้มได้ในอนาคต\n✅ PDPA Compliant",
+      "shareText": "ฉันได้ 🌙 คนยามดึก! ความคิดสร้างสรรค์บานสะพรั่งหลังเที่ยงคืน\nคุณล่ะเป็นช่วงเวลาไหน? มาลองดูกัน!"
+    }
+  ],
+  "tiebreakerOrder": ["morning", "evening", "afternoon", "midnight"],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "ตื่นนอน 7 โมงเช้า ความรู้สึกคือ:",
+      "options": [
+        { "text": "ตื่นมานานแล้ว ทำงานเสร็จไปหลายอย่างแล้วด้วย", "scores": { "morning": 3, "afternoon": 0, "evening": 0, "midnight": 0 } },
+        { "text": "ตื่นได้ปกติ ยังไม่ full power แต่โอเค", "scores": { "morning": 1, "afternoon": 3, "evening": 0, "midnight": 0 } },
+        { "text": "ลุกได้ แต่อย่าให้คุยหรือตัดสินใจอะไรก่อน 9 โมง", "scores": { "morning": 0, "afternoon": 1, "evening": 3, "midnight": 0 } },
+        { "text": "เพิ่งนอนไปไม่กี่ชั่วโมง...", "scores": { "morning": 0, "afternoon": 0, "evening": 0, "midnight": 3 } }
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "งานสำคัญที่สุดของวันนี้ คุณเลือกทำตอนไหน:",
+      "options": [
+        { "text": "เช้าตรู่ก่อนใครตื่น", "scores": { "morning": 3, "afternoon": 0, "evening": 0, "midnight": 1 } },
+        { "text": "ช่วงสาย 10-12 โมง", "scores": { "morning": 0, "afternoon": 3, "evening": 0, "midnight": 0 } },
+        { "text": "บ่าย 2-5 โมง", "scores": { "morning": 0, "afternoon": 1, "evening": 3, "midnight": 0 } },
+        { "text": "ดึกหลังทุกคนหลับ", "scores": { "morning": 0, "afternoon": 0, "evening": 1, "midnight": 3 } }
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "วันเสาร์ไม่มีนัด คุณตื่นตอนไหน:",
+      "options": [
+        { "text": "6-7 โมง ร่างกายไม่ให้นอนต่อ", "scores": { "morning": 3, "afternoon": 0, "evening": 0, "midnight": 0 } },
+        { "text": "8-9 โมง ตามธรรมชาติ", "scores": { "morning": 1, "afternoon": 3, "evening": 0, "midnight": 0 } },
+        { "text": "10-11 โมง ได้ที", "scores": { "morning": 0, "afternoon": 1, "evening": 3, "midnight": 0 } },
+        { "text": "บ่ายหรือเย็น นอนดึกนอนตื่นสาย", "scores": { "morning": 0, "afternoon": 0, "evening": 1, "midnight": 3 } }
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "ไอเดียดีๆ มักผุดขึ้นมาตอน:",
+      "options": [
+        { "text": "อาบน้ำเช้า หรือออกกำลังกายตอนเช้า", "scores": { "morning": 3, "afternoon": 0, "evening": 0, "midnight": 0 } },
+        { "text": "กินข้าวกลางวัน หรือเดินเล่นตอนบ่าย", "scores": { "morning": 0, "afternoon": 3, "evening": 1, "midnight": 0 } },
+        { "text": "นั่งคุยกับเพื่อนตอนเย็น", "scores": { "morning": 0, "afternoon": 0, "evening": 3, "midnight": 1 } },
+        { "text": "ใกล้เที่ยงคืน หรือตี 1-2", "scores": { "morning": 0, "afternoon": 0, "evening": 0, "midnight": 3 } }
+      ]
+    },
+    {
+      "id": "q5",
+      "question": "นัดประชุม 8 โมงเช้า คุณรู้สึกยังไง:",
+      "options": [
+        { "text": "โอเคมาก ตื่นตัวดีด้วย", "scores": { "morning": 3, "afternoon": 0, "evening": 0, "midnight": 0 } },
+        { "text": "ไปได้ แต่ไม่ใช่ ideal", "scores": { "morning": 0, "afternoon": 3, "evening": 1, "midnight": 0 } },
+        { "text": "ไปได้ แต่อย่าให้ present ก่อน 10 โมง", "scores": { "morning": 0, "afternoon": 1, "evening": 3, "midnight": 0 } },
+        { "text": "8 โมงเช้า... นั่นคือตี 8 ของฉัน", "scores": { "morning": 0, "afternoon": 0, "evening": 0, "midnight": 3 } }
+      ]
+    },
+    {
+      "id": "q6",
+      "question": "ช่วงเวลาที่คุณ social มากที่สุด:",
+      "options": [
+        { "text": "เช้าๆ คุยกันก่อนทุกคนเริ่มงาน", "scores": { "morning": 3, "afternoon": 1, "evening": 0, "midnight": 0 } },
+        { "text": "พักกลางวัน คุยกันตอนกินข้าว", "scores": { "morning": 0, "afternoon": 3, "evening": 0, "midnight": 0 } },
+        { "text": "หลังเลิกงาน นัดกินข้าวเย็น", "scores": { "morning": 0, "afternoon": 0, "evening": 3, "midnight": 0 } },
+        { "text": "ดึกๆ คุยออนไลน์หรือเกม", "scores": { "morning": 0, "afternoon": 0, "evening": 1, "midnight": 3 } }
+      ]
+    },
+    {
+      "id": "q7",
+      "question": "พลังงานคุณตกต่ำที่สุดตอน:",
+      "options": [
+        { "text": "บ่ายหลังกินข้าว อยากนอน", "scores": { "morning": 3, "afternoon": 0, "evening": 0, "midnight": 0 } },
+        { "text": "เช้าตรู่ ก่อนที่ร่างกายจะ warm up", "scores": { "morning": 0, "afternoon": 3, "evening": 0, "midnight": 1 } },
+        { "text": "กลางวันแดดแรงๆ", "scores": { "morning": 0, "afternoon": 0, "evening": 3, "midnight": 0 } },
+        { "text": "ช่วงเช้าของทุกวัน ขอแค่ไม่ต้องคุยกับใคร", "scores": { "morning": 0, "afternoon": 0, "evening": 0, "midnight": 3 } }
+      ]
+    },
+    {
+      "id": "q8",
+      "question": "ถ้านอนไม่หลับ คุณทำอะไร:",
+      "options": [
+        { "text": "ลุกขึ้นทำงาน เสียดายเวลา", "scores": { "morning": 3, "afternoon": 0, "evening": 0, "midnight": 1 } },
+        { "text": "อ่านหนังสือจนหลับ", "scores": { "morning": 0, "afternoon": 3, "evening": 1, "midnight": 0 } },
+        { "text": "ฟัง podcast หรือ music", "scores": { "morning": 0, "afternoon": 1, "evening": 3, "midnight": 0 } },
+        { "text": "เล่นโทรศัพท์ ถ้าไม่ง่วงก็ไม่นอน", "scores": { "morning": 0, "afternoon": 0, "evening": 0, "midnight": 3 } }
+      ]
+    },
+    {
+      "id": "q9",
+      "question": "เพื่อนบอกว่า morning person หรือ night owl:",
+      "options": [
+        { "text": "Morning person ชัดเจน", "scores": { "morning": 3, "afternoon": 0, "evening": 0, "midnight": 0 } },
+        { "text": "กลางๆ ขึ้นอยู่กับวัน", "scores": { "morning": 0, "afternoon": 3, "evening": 1, "midnight": 0 } },
+        { "text": "เย็น-ค่ำ person มากกว่า", "scores": { "morning": 0, "afternoon": 0, "evening": 3, "midnight": 1 } },
+        { "text": "Night owl อย่างชัดเจน", "scores": { "morning": 0, "afternoon": 0, "evening": 0, "midnight": 3 } }
+      ]
+    },
+    {
+      "id": "q10",
+      "question": "ถ้าเลือกได้ คุณอยากให้วันทำงานเริ่มกี่โมง? (คำถามพิเศษ)",
+      "isMeta": true,
+      "weightBonus": 2,
+      "options": [
+        { "text": "6-7 โมงเช้า เสร็จเร็วจะได้พักเร็ว", "scores": { "morning": 3, "afternoon": 0, "evening": 0, "midnight": 0 } },
+        { "text": "9-10 โมง มาตรฐานทั่วไป", "scores": { "morning": 0, "afternoon": 3, "evening": 0, "midnight": 0 } },
+        { "text": "บ่ายโมง เริ่มวันช้าๆ", "scores": { "morning": 0, "afternoon": 0, "evening": 3, "midnight": 0 } },
+        { "text": "ดึก งานดีสุดตอนกลางคืน", "scores": { "morning": 0, "afternoon": 0, "evening": 0, "midnight": 3 } }
+      ]
+    }
+  ]
+}

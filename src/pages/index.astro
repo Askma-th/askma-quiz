@@ -2,90 +2,100 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../components/BaseLayout.astro';
 
-const quizzes = await getCollection('quizzes', ({ data }) => data.isPublished);
+const quizzes = (await getCollection('quizzes', ({ data }) => data.isPublished))
+  .sort((a, b) => new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime());
 ---
 
-<BaseLayout
-  title="Askma Quiz — แบบทดสอบบุคลิกภาพ"
-  description="คอลเลกชั่นแบบทดสอบบุคลิกภาพจาก Askma"
->
-  <main class="hub-container">
-    <header>
-      <h1>Askma Quiz</h1>
-      <p>คอลเลกชั่นแบบทดสอบสไตล์ Askma</p>
-    </header>
-
-    <div class="quiz-grid">
-      {quizzes.map(quiz => (
-        <a href={`/${quiz.id.replace(/\.json$/, '')}`} class="quiz-card">
-          <div class="emoji">{quiz.data.emoji}</div>
-          <h2>{quiz.data.title}</h2>
-          <p>{quiz.data.description}</p>
-          <span class="meta">⏱ {quiz.data.estimatedMinutes} นาที</span>
-        </a>
-      ))}
+<BaseLayout title="Askma Quiz — คอลเลกชั่นแบบทดสอบ" description="คอลเลกชั่นแบบทดสอบสไตล์ Askma">
+  <div class="hub-wrap">
+    <div class="hub-header">
+      <h1 class="hub-title">Askma Quiz</h1>
+      <p class="hub-sub">เลือกแบบทดสอบที่ใช่สำหรับคุณ</p>
     </div>
-  </main>
-
-  <style>
-    .hub-container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 3rem 1rem;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    h1 {
-      font-size: 3rem;
-      color: var(--accent);
-      margin: 0 0 0.5rem 0;
-    }
-
-    .quiz-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .quiz-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.5rem;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-
-    .quiz-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--accent);
-    }
-
-    .quiz-card .emoji {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .quiz-card h2 {
-      font-size: 1.25rem;
-      margin: 0 0 0.5rem 0;
-      color: var(--text);
-    }
-
-    .quiz-card p {
-      color: var(--text-muted);
-      margin: 0 0 1rem 0;
-      font-size: 0.9rem;
-    }
-
-    .meta {
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-  </style>
+    <div class="hub-grid">
+      {quizzes.map(quiz => {
+        const slug = quiz.id.replace(/\.json$/, '');
+        const accent = quiz.data.theme?.accentColor || '#FFD600';
+        return (
+          <a href={`/${slug}`} class="hub-card" style={`--card-accent: ${accent};`}>
+            <div class="hub-card-image" style={`background: linear-gradient(${quiz.data.theme?.bgGradient || '135deg, #0d0d1a, #1a1a28'});`}>
+              <span class="hub-card-emoji">{quiz.data.emoji}</span>
+            </div>
+            <div class="hub-card-body">
+              <p class="hub-card-title">{quiz.data.title}</p>
+              <p class="hub-card-meta">⏱ {quiz.data.estimatedMinutes} นาที · {quiz.data.questions.length} คำถาม</p>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
 </BaseLayout>
+
+<style is:global>
+  .hub-wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 2rem 16px 4rem;
+  }
+  .hub-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .hub-title {
+    font-family: 'Fraunces', serif;
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--accent);
+    margin: 0 0 0.5rem;
+  }
+  .hub-sub {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin: 0;
+  }
+  .hub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .hub-card {
+    background: var(--card);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1.5px solid var(--border);
+    text-decoration: none;
+    transition: transform 0.18s, border-color 0.18s, box-shadow 0.18s;
+    display: block;
+  }
+  .hub-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--card-accent);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+  .hub-card-image {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hub-card-emoji {
+    font-size: 3.5rem;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+  }
+  .hub-card-body {
+    padding: 14px 16px 18px;
+  }
+  .hub-card-title {
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 6px;
+    line-height: 1.4;
+  }
+  .hub-card-meta {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    margin: 0;
+  }
+</style>

@@ -1,0 +1,183 @@
+{
+  "isPublished": true,
+  "title": "คุณ Travel Style ไหน?",
+  "titleEn": "What's Your Travel Style?",
+  "description": "ค้นพบสไตล์การเดินทางที่ใช่สำหรับคุณ",
+  "descriptionEn": "Discover the travel style that fits you best",
+  "emoji": "✈️",
+  "accentColor": "#06b6d4",
+  "estimatedMinutes": 2,
+  "publishedAt": "2026-05-15",
+  "ogTitle": "ฉันได้ 🎒 นักเดินทางอิสระ! คุณล่ะ Travel Style ไหน?",
+  "ogDescription": "ทำ quiz นี้แล้วรู้เลยว่าคุณเที่ยวแบบไหน",
+  "ogImage": "/og/travel-style.png",
+  "theme": {
+    "accentColor": "#06b6d4",
+    "bgGradient": "135deg, #071a1a, #0e2a2a",
+    "ambientEmojis": ["✈️", "🏖️", "🏔️", "🗺️"],
+    "imageZoneEmojis": ["✈️", "🏖️", "🏛️", "🏠"]
+  },
+  "resultTypes": [
+    {
+      "key": "backpacker",
+      "label": "🎒 BACKPACKER",
+      "title": "นักเดินทางอิสระ",
+      "personality": "\"ยืดหยุ่น ประหยัด ชอบเจอคนใหม่\"",
+      "description": "คุณชอบวางแผนแค่คร่าวๆ แล้วปล่อยให้ทริปพาไป กระเป๋าเบา งบจำกัด แต่ประสบการณ์เต็ม\n\nคุณจำร้าน street food และเพื่อนที่เจอระหว่างทางได้ดีกว่าโรงแรมห้าดาว",
+      "strengths": [
+        "🌍 เปิดใจ — คุยกับคนท้องถิ่นได้ง่าย",
+        "💰 ประหยัดเก่ง — เที่ยวได้นานด้วยงบน้อย",
+        "🎒 ยืดหยุ่น — เปลี่ยนแผนได้ทันที"
+      ],
+      "cta": "Askma มีแบบสำรวจเรื่องไลฟ์สไตล์และการเดินทาง\n\nแชร์มุมมองของคุณแบบไม่ระบุตัวตน\n\n🎒 ตอบสั้นๆ ได้แต้มสะสมในอนาคต\n🔒 익명 100%\n✅ PDPA Compliant",
+      "shareText": "ฉันได้ 🎒 นักเดินทางอิสระ! ยืดหยุ่น ประหยัด ชอบเจอคนใหม่\nคุณล่ะ Travel Style ไหน? มาลองดูกัน!"
+    },
+    {
+      "key": "luxury",
+      "label": "👑 LUXURY",
+      "title": "สายหรูไม่หยุด",
+      "personality": "\"ความสะดวกสบายคือความสุข\"",
+      "description": "คุณเที่ยวเพื่อพักผ่อนจริงๆ ไม่ใช่มาเหนื่อยเพิ่ม ชอบโรงแรมดี อาหารอร่อย และไม่ต้องแย่งกับฝูงชน\n\nงบมีจำกัดก็ตาม แต่คุณเลือกใช้ให้คุ้มในสิ่งที่สำคัญ",
+      "strengths": [
+        "👑 รู้จักเลือก — ได้คุณภาพที่คุ้มค่า",
+        "😌 พักผ่อนจริง — กลับมาแล้วสดชื่น",
+        "✨ มองรายละเอียด — บริการดีรู้ทันที"
+      ],
+      "cta": "Askma ออกแบบให้ตอบสะดวก ไม่ต้องเสียเวลา\n\nเหมือนบริการที่ดีตอนเที่ยว\n\n👑 คำถามคุณภาพ ตอบเมื่อพร้อม\n💰 สะสมแต้มในอนาคต\n✅ PDPA Compliant",
+      "shareText": "ฉันได้ 👑 สายหรูไม่หยุด! ความสะดวกสบายคือความสุข\nคุณล่ะ Travel Style ไหน? มาลองดูกัน!"
+    },
+    {
+      "key": "culture",
+      "label": "🏛️ CULTURE",
+      "title": "นักสำรวจวัฒนธรรม",
+      "personality": "\"เที่ยวเพื่อเรียนรู้ ไม่ใช่แค่ถ่ายรูป\"",
+      "description": "คุณชอบพิพิธภัณฑ์ ตลาดท้องถิ่น ประวัติศาสตร์ และคุยกับคนที่อยู่ที่นั่นจริงๆ\n\nรูปสวยก็ดี แต่เรื่องราวที่ได้กลับมาคือสมบัติจริงของทริป",
+      "strengths": [
+        "📚 อยากรู้ — อ่านก่อนไป ถามระหว่างทาง",
+        "🗺️ วางแผนดี — ไม่พลาดจุดสำคัญ",
+        "🤝 เคารพท้องถิ่น — เที่ยวอย่างมีความรับผิดชอบ"
+      ],
+      "cta": "Askma รวบรวมความคิดเห็นจากคนทั่วประเทศ\n\nช่วยให้เห็นว่าคนไทยคิดยังไงกับหลายเรื่อง\n\n🏛️ แบบสำรวจหลากหลายหัวข้อ\n🔒 익명 — พูดตรงได้\n✅ PDPA Compliant",
+      "shareText": "ฉันได้ 🏛️ นักสำรวจวัฒนธรรม! เที่ยวเพื่อเรียนรู้ ไม่ใช่แค่ถ่ายรูป\nคุณล่ะ Travel Style ไหน? มาลองดูกัน!"
+    },
+    {
+      "key": "homebody",
+      "label": "🏠 HOMEBODY",
+      "title": "สุขใจที่บ้าน",
+      "personality": "\"ความสุขไม่จำเป็นต้องอยู่ไกล\"",
+      "description": "คุณอาจชอบ staycation หรือเที่ยวใกล้ๆ มากกว่าบินข้ามทวีป บ้านคือที่พักผ่อนที่ดีที่สุด\n\nไม่ได้ไม่ชอบเที่ยว แต่คุณเลือกเที่ยวเมื่อมันคุ้มกับพลังงาน",
+      "strengths": [
+        "🏠 รู้จักพัก — ไม่บังคับตัวเองเที่ยวตามกระแส",
+        "💆 สมดุล — ไม่เหนื่อยจนเครียดหลังทริป",
+        "🍜 รู้จักความสุขเล็กๆ — คาเฟ่ใกล้บ้านก็พอ"
+      ],
+      "cta": "Askma ตอบได้จากบ้าน ไม่ต้องออกไปไหน\n\nแชร์ความคิดเห็นระหว่างพักผ่อน\n\n🏠 สะดวก สั้น ได้แต้มสะสมในอนาคต\n🔒 익명 100%\n✅ PDPA Compliant",
+      "shareText": "ฉันได้ 🏠 สุขใจที่บ้าน! ความสุขไม่จำเป็นต้องอยู่ไกล\nคุณล่ะ Travel Style ไหน? มาลองดูกัน!"
+    }
+  ],
+  "tiebreakerOrder": ["culture", "backpacker", "luxury", "homebody"],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "ได้วันหยุดยาว 3 วัน คุณจะ:",
+      "options": [
+        { "text": "จองตั๋วไปที่ใหม่ๆ แบบไม่วางแผนมาก", "scores": { "backpacker": 3, "luxury": 0, "culture": 1, "homebody": 0 } },
+        { "text": "จองรีสอร์ทหรือโรงแรมดีๆ พักผ่อน", "scores": { "backpacker": 0, "luxury": 3, "culture": 0, "homebody": 1 } },
+        { "text": "ไปเมืองที่อยากเรียนรู้ประวัติหรือวัฒนธรรม", "scores": { "backpacker": 1, "luxury": 0, "culture": 3, "homebody": 0 } },
+        { "text": "อยู่บ้าน ทำอาหาร ดูซีรีส์", "scores": { "backpacker": 0, "luxury": 0, "culture": 0, "homebody": 3 } }
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "เวลาวางแผนเที่ยว คุณ:",
+      "options": [
+        { "text": "ดูแค่ที่พักกับตั๋ว ที่เหลือไปตามใจ", "scores": { "backpacker": 3, "luxury": 0, "culture": 0, "homebody": 0 } },
+        { "text": "จองล่วงหน้า รีวิวดี บริการครบ", "scores": { "backpacker": 0, "luxury": 3, "culture": 1, "homebody": 0 } },
+        { "text": "ทำ itinerary รายวัน มีพิพิธภัณฑ์และตลาด", "scores": { "backpacker": 0, "luxury": 0, "culture": 3, "homebody": 0 } },
+        { "text": "ไม่วางแผนมาก อาจไม่ไปไหนเลย", "scores": { "backpacker": 0, "luxury": 0, "culture": 0, "homebody": 3 } }
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "อาหารระหว่างทริปที่ชอบที่สุด:",
+      "options": [
+        { "text": "street food และร้านท้องถิ่น", "scores": { "backpacker": 3, "luxury": 0, "culture": 2, "homebody": 0 } },
+        { "text": "ร้าน fine dining หรือโรงแรม", "scores": { "backpacker": 0, "luxury": 3, "culture": 0, "homebody": 0 } },
+        { "text": "อาหารท้องถิ่นที่มีเรื่องราว", "scores": { "backpacker": 1, "luxury": 0, "culture": 3, "homebody": 0 } },
+        { "text": "สั่ง delivery หรือทำกินเองที่พัก", "scores": { "backpacker": 0, "luxury": 1, "culture": 0, "homebody": 3 } }
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "เจอรถไฟดีเลย 2 ชั่วโมง คุณ:",
+      "options": [
+        { "text": "มองเป็น adventure คุยกับคนรอบข้าง", "scores": { "backpacker": 3, "luxury": 0, "culture": 1, "homebody": 0 } },
+        { "text": "หงุดหงิด อยากได้ความสะดวกคืน", "scores": { "backpacker": 0, "luxury": 3, "culture": 0, "homebody": 1 } },
+        { "text": "เปิด guidebook อ่านประวัติเมืองที่จะไป", "scores": { "backpacker": 0, "luxury": 0, "culture": 3, "homebody": 0 } },
+        { "text": "คิดว่าถ้าอยู่บ้างคงไม่เจอเรื่องนี้", "scores": { "backpacker": 0, "luxury": 0, "culture": 0, "homebody": 3 } }
+      ]
+    },
+    {
+      "id": "q5",
+      "question": "ของที่ต้องมีในตู้เที่ยว:",
+      "options": [
+        { "text": "power bank, ผ้าเย็น, รองเท้าเดิน", "scores": { "backpacker": 3, "luxury": 0, "culture": 1, "homebody": 0 } },
+        { "text": "ผลิตภัณฑ์สปา, หูฟังตัดเสียง, ชุดนอนดี", "scores": { "backpacker": 0, "luxury": 3, "culture": 0, "homebody": 0 } },
+        { "text": "หนังสือ, แผนที่, บันทึกการเดินทาง", "scores": { "backpacker": 1, "luxury": 0, "culture": 3, "homebody": 0 } },
+        { "text": "หมอนรองคอ, ผ้าห่ม, ชาแพ็ก", "scores": { "backpacker": 0, "luxury": 1, "culture": 0, "homebody": 3 } }
+      ]
+    },
+    {
+      "id": "q6",
+      "question": "Instagram ของคุณตอนเที่ยวมักมี:",
+      "options": [
+        { "text": "รูปคน วิว และของกินถูกๆ", "scores": { "backpacker": 3, "luxury": 0, "culture": 1, "homebody": 0 } },
+        { "text": "รูปโรงแรม สระ อาหารสวย", "scores": { "backpacker": 0, "luxury": 3, "culture": 0, "homebody": 0 } },
+        { "text": "รูปวัด พิพิธภัณฑ์ ป้ายประวัติศาสตร์", "scores": { "backpacker": 0, "luxury": 0, "culture": 3, "homebody": 0 } },
+        { "text": "ไม่ค่อยโพสต์ หรือโพสต์บ้าน/คาเฟ่ใกล้บ้าน", "scores": { "backpacker": 0, "luxury": 0, "culture": 0, "homebody": 3 } }
+      ]
+    },
+    {
+      "id": "q7",
+      "question": "เพื่อนชวนไปเที่ยวต่างประเทศแบบกะทันหัน คุณ:",
+      "options": [
+        { "text": "ไปเลย จัดกระเป๋าแล้วออก", "scores": { "backpacker": 3, "luxury": 0, "culture": 1, "homebody": 0 } },
+        { "text": "ไปได้ถ้าจองที่พักดีๆ ได้", "scores": { "backpacker": 0, "luxury": 3, "culture": 0, "homebody": 0 } },
+        { "text": "ไปได้ถ้ารู้ว่าไปเรียนรู้อะไร", "scores": { "backpacker": 1, "luxury": 0, "culture": 3, "homebody": 0 } },
+        { "text": "ขอผ่าน ยังไม่พร้อมออกจาก comfort zone", "scores": { "backpacker": 0, "luxury": 0, "culture": 0, "homebody": 3 } }
+      ]
+    },
+    {
+      "id": "q8",
+      "question": "สิ่งที่ทำให้ทริป \"สำเร็จ\" สำหรับคุณคือ:",
+      "options": [
+        { "text": "ได้เจอคนหรือเรื่องราวที่ไม่คาดคิด", "scores": { "backpacker": 3, "luxury": 0, "culture": 2, "homebody": 0 } },
+        { "text": "พักผ่อนเต็มที่ ไม่เหนื่อย", "scores": { "backpacker": 0, "luxury": 3, "culture": 0, "homebody": 2 } },
+        { "text": "เรียนรู้สิ่งใหม่เกี่ยวกับที่นั้น", "scores": { "backpacker": 1, "luxury": 0, "culture": 3, "homebody": 0 } },
+        { "text": "กลับมาแล้วรู้สึกดี ไม่เสียดายเวลา", "scores": { "backpacker": 0, "luxury": 1, "culture": 0, "homebody": 3 } }
+      ]
+    },
+    {
+      "id": "q9",
+      "question": "งบเที่ยวจำกัด คุณจะตัด:",
+      "options": [
+        { "text": "ที่พักหรู แต่กินและเดินทางถูก", "scores": { "backpacker": 3, "luxury": 0, "culture": 1, "homebody": 0 } },
+        { "text": "กิจกรรมเสริม แต่ที่พักต้องดี", "scores": { "backpacker": 0, "luxury": 3, "culture": 0, "homebody": 0 } },
+        { "text": "ช้อปปิ้ง แต่พิพิธภัณฑ์ต้องไป", "scores": { "backpacker": 1, "luxury": 0, "culture": 3, "homebody": 0 } },
+        { "text": "ไม่ไปเลย เก็บเงินไว้พักที่บ้าน", "scores": { "backpacker": 0, "luxury": 0, "culture": 0, "homebody": 3 } }
+      ]
+    },
+    {
+      "id": "q10",
+      "question": "ทริปในฝันของคุณคือแบบไหน? (คำถามพิเศษ)",
+      "isMeta": true,
+      "weightBonus": 2,
+      "options": [
+        { "text": "เดินทางยาวๆ ไม่ซ้ำใคร งบน้อยแต่เต็มอิ่ม", "scores": { "backpacker": 3, "luxury": 0, "culture": 1, "homebody": 0 } },
+        { "text": "พักผ่อนหรู ไม่ต้องคิดมาก", "scores": { "backpacker": 0, "luxury": 3, "culture": 0, "homebody": 0 } },
+        { "text": "เที่ยวเมืองเก่า เรียนรู้วัฒนธรรม", "scores": { "backpacker": 0, "luxury": 0, "culture": 3, "homebody": 0 } },
+        { "text": "อยู่บ้านสบายๆ มีความสุขพอ", "scores": { "backpacker": 0, "luxury": 0, "culture": 0, "homebody": 3 } }
+      ]
+    }
+  ]
+}

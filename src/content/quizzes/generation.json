@@ -1,0 +1,183 @@
+{
+  "isPublished": true,
+  "title": "Gen ไหนอยู่ในตัวคุณ?",
+  "titleEn": "Which Generation Lives in You?",
+  "description": "ค้นพบว่าคุณคิดแบบ Gen ไหนผ่าน 10 คำถาม",
+  "descriptionEn": "Discover which generation mindset fits you",
+  "emoji": "🎭",
+  "accentColor": "#a855f7",
+  "estimatedMinutes": 2,
+  "publishedAt": "2026-05-15",
+  "ogTitle": "ฉันได้ 📱 Millennial Heart! Gen ไหนอยู่ในตัวคุณ?",
+  "ogDescription": "ทำ quiz นี้แล้วรู้เลยว่าคุณคิดแบบ Gen ไหน",
+  "ogImage": "/og/gen-nai.png",
+  "theme": {
+    "accentColor": "#a855f7",
+    "bgGradient": "135deg, #12081a, #1e0e2e",
+    "ambientEmojis": ["📺", "💿", "📱", "🤖"],
+    "imageZoneEmojis": ["📺", "💿", "📱", "🤖"]
+  },
+  "resultTypes": [
+    {
+      "key": "boomer",
+      "label": "📺 BOOMER",
+      "title": "Boomer Soul",
+      "personality": "\"มั่นคง อดทน เชื่อในความขยัน\"",
+      "description": "คุณให้ความสำคัญกับความน่าเชื่อถือ ประสบการณ์ และการทำงานหนักเพื่อเป้าหมายระยะยาว\n\nอาจไม่ตามเทรนด์เร็ว แต่เมื่อตัดสินใจแล้วมักมั่นคงและไม่เปลี่ยนง่าย",
+      "strengths": [
+        "🏛️ มั่นคง — ไม่เปลี่ยนใจตามกระแส",
+        "🤝 น่าเชื่อถือ — คำพูดมีน้ำหนัก",
+        "📈 มองระยะยาว — อดทนรอผลลัพธ์"
+      ],
+      "cta": "Askma ให้ทุก Gen มีเสียงเท่าเทียม\n\nความคิดเห็นของคุณมีค่าไม่ว่าอายุเท่าไหร่\n\n📺 ตอบแบบสำรวจสั้นๆ ได้แต้มในอนาคต\n🔒 익명 100%\n✅ PDPA Compliant",
+      "shareText": "ฉันได้ 📺 Boomer Soul! มั่นคง อดทน เชื่อในความขยัน\nGen ไหนอยู่ในตัวคุณ? มาลองดูกัน!"
+    },
+    {
+      "key": "genx",
+      "label": "💿 GEN X",
+      "title": "Gen X Spirit",
+      "personality": "\"เป็นอิสระ สงสัยระบบ ปรับตัวเก่ง\"",
+      "description": "คุณโตมากับช่วงเปลี่ยนผ่าน เลยไม่เชื่อทุกอย่างง่ายๆ ชอบคิดเอง ชอบพึ่งตัวเอง และไม่ชอบถูกบอกว่าต้องทำยังไง\n\nเป็นคนกลางที่เข้าใจทั้งโลกเก่าและโลกใหม่",
+      "strengths": [
+        "🧭 เป็นอิสระ — ไม่พึ่งคนอื่นเกินไป",
+        "🔍 สงสัย — ไม่กินข่าวทุกอย่าง",
+        "⚖️ สมดุล — เข้าใจหลายมุม"
+      ],
+      "cta": "Askma ไม่บังคับให้เชื่ออะไร\n\nตอบตามความคิดเห็นจริงของคุณ\n\n💿 หลากหลายหัวข้อให้เลือก\n💰 สะสมแต้มในอนาคต\n✅ PDPA Compliant",
+      "shareText": "ฉันได้ 💿 Gen X Spirit! เป็นอิสระ สงสัยระบบ ปรับตัวเก่ง\nGen ไหนอยู่ในตัวคุณ? มาลองดูกัน!"
+    },
+    {
+      "key": "millennial",
+      "label": "📱 MILLENNIAL",
+      "title": "Millennial Heart",
+      "personality": "\"หลงใหลประสบการณ์ ชอบความหมาย\"",
+      "description": "คุณชอบงานที่มี purpose ชอบ travel และ brunch ที่มีเรื่องเล่า และมักคิดเรื่อง work-life balance\n\nอาจเครียดเรื่องการเงิน แต่ยังเชื่อว่าชีวิตต้องมีความหมายมากกว่าแค่เงิน",
+      "strengths": [
+        "💡 มองภาพใหญ่ — สนใจ impact",
+        "🌱 ปรับตัวกับ tech — ใช้ดิจิทัลเป็นเครื่องมือ",
+        "🤗 เอาใจใส่ — ใส่ใจคนและสังคม"
+      ],
+      "cta": "Askma คือพื้นที่แสดงความคิดเห็นแบบมีความหมาย\n\nทุกคำตอบช่วยสะท้อนภาพสังคม\n\n📱 ตอบสั้น ได้แต้มสะสมในอนาคต\n🔒 익명 — พูดตรงได้\n✅ PDPA Compliant",
+      "shareText": "ฉันได้ 📱 Millennial Heart! หลงใหลประสบการณ์ ชอบความหมาย\nGen ไหนอยู่ในตัวคุณ? มาลองดูกัน!"
+    },
+    {
+      "key": "genz",
+      "label": "🤖 GEN Z",
+      "title": "Gen Z Energy",
+      "personality": "\"เร็ว ตรง ชอบ authenticity\"",
+      "description": "คุณคุ้นกับโลกที่เปลี่ยนเร็ว ชอบเนื้อหาสั้น ตรง และไม่ชอบของเทียม\n\nมักใช้ meme สื่อความหมาย และเชื่อเพื่อนมากกว่าโฆษณา",
+      "strengths": [
+        "⚡ เรียนรู้เร็ว — จับเทรนด์ได้ทัน",
+        "🎯 ตรงไปตรงมา — ไม่ชอบอ้อมค้อม",
+        "🌐 โลกไร้พรมแดน — เชื่อมต่อออนไลน์ได้ดี"
+      ],
+      "cta": "Askma ออกแบบให้ตอบเร็ว ไม่น่าเบื่อ\n\nเหมือน content ที่คุณชอบ scroll\n\n🤖 แบบสำรวจสั้น สนุก ได้แต้มในอนาคต\n🔒 익명 100%\n✅ PDPA Compliant",
+      "shareText": "ฉันได้ 🤖 Gen Z Energy! เร็ว ตรง ชอบ authenticity\nGen ไหนอยู่ในตัวคุณ? มาลองดูกัน!"
+    }
+  ],
+  "tiebreakerOrder": ["millennial", "genz", "genx", "boomer"],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "ได้ข่าวใหญ่จากโซเชียล คุณ:",
+      "options": [
+        { "text": "รอให้สื่อหลักยืนยันก่อนเชื่อ", "scores": { "boomer": 3, "genx": 2, "millennial": 0, "genz": 0 } },
+        { "text": "เช็คหลายแหล่ง ไม่เชื่อแหล่งเดียว", "scores": { "boomer": 1, "genx": 3, "millennial": 1, "genz": 1 } },
+        { "text": "อ่าน thread และความคิดเห็นลึกๆ", "scores": { "boomer": 0, "genx": 1, "millennial": 3, "genz": 1 } },
+        { "text": "เห็นปุ๊บ แชร์หรือคอมเมนต์ทันที", "scores": { "boomer": 0, "genx": 0, "millennial": 1, "genz": 3 } }
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "เพลงที่คุณฟังบ่อยที่สุดมาจาก:",
+      "options": [
+        { "text": "ศิลปินรุ่นเก่าที่ฟังมาตั้งแต่เด็ก", "scores": { "boomer": 3, "genx": 2, "millennial": 0, "genz": 0 } },
+        { "text": "CD/MP3 ยุค 90s-2000s", "scores": { "boomer": 0, "genx": 3, "millennial": 2, "genz": 0 } },
+        { "text": "Spotify playlist ที่ curate เอง", "scores": { "boomer": 0, "genx": 0, "millennial": 3, "genz": 1 } },
+        { "text": "TikTok sound หรือศิลปินใหม่จากออนไลน์", "scores": { "boomer": 0, "genx": 0, "millennial": 0, "genz": 3 } }
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "เรื่องเงิน คุณเชื่อว่า:",
+      "options": [
+        { "text": "ออมสม่ำเสมอ ทำงานหนักแล้วจะดี", "scores": { "boomer": 3, "genx": 1, "millennial": 0, "genz": 0 } },
+        { "text": "อย่าเชื่อธนาคารเกินไป กระจายความเสี่ยง", "scores": { "boomer": 1, "genx": 3, "millennial": 1, "genz": 0 } },
+        { "text": "ใช้เงินกับประสบการณ์ที่มีความหมาย", "scores": { "boomer": 0, "genx": 0, "millennial": 3, "genz": 1 } },
+        { "text": "หา side income หลายทาง ไม่ยึดงานเดียว", "scores": { "boomer": 0, "genx": 1, "millennial": 1, "genz": 3 } }
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "เวลาคุยกับพ่อแม่เรื่องเทคโนโลยี:",
+      "options": [
+        { "text": "คุณเป็นคนสอน พ่อแม่ฟัง", "scores": { "boomer": 0, "genx": 1, "millennial": 2, "genz": 3 } },
+        { "text": "อธิบายทีละขั้น ใจเย็น", "scores": { "boomer": 1, "genx": 2, "millennial": 3, "genz": 1 } },
+        { "text": "บางทีก็งงว่าทำไมเขาไม่เข้าใจ", "scores": { "boomer": 0, "genx": 3, "millennial": 1, "genz": 2 } },
+        { "text": "พ่อแม่สอนคุณมากกว่า", "scores": { "boomer": 3, "genx": 1, "millennial": 0, "genz": 0 } }
+      ]
+    },
+    {
+      "id": "q5",
+      "question": "แบรนด์ที่คุณซื้อซ้ำมักเป็นแบบ:",
+      "options": [
+        { "text": "แบรนด์ที่ใช้มานาน ไว้ใจได้", "scores": { "boomer": 3, "genx": 2, "millennial": 0, "genz": 0 } },
+        { "text": "คุณภาพดี ไม่จำเป็นต้องฮิต", "scores": { "boomer": 1, "genx": 3, "millennial": 1, "genz": 0 } },
+        { "text": "มี story หรือคุณค่าที่ align กับตัวเอง", "scores": { "boomer": 0, "genx": 0, "millennial": 3, "genz": 1 } },
+        { "text": "เจอจากรีวิวจริงหรือ creator ที่ชอบ", "scores": { "boomer": 0, "genx": 0, "millennial": 1, "genz": 3 } }
+      ]
+    },
+    {
+      "id": "q6",
+      "question": "การทำงานที่คุณฝัน:",
+      "options": [
+        { "text": "มั่นคง สวัสดิการดี อยู่ยาวๆ", "scores": { "boomer": 3, "genx": 1, "millennial": 0, "genz": 0 } },
+        { "text": "อิสระ ไม่ต้องเกรงใครมาก", "scores": { "boomer": 0, "genx": 3, "millennial": 1, "genz": 1 } },
+        { "text": "มีความหมาย และ work-life balance", "scores": { "boomer": 0, "genx": 0, "millennial": 3, "genz": 0 } },
+        { "text": "ยืดหยุ่น remote หรือ freelance", "scores": { "boomer": 0, "genx": 1, "millennial": 1, "genz": 3 } }
+      ]
+    },
+    {
+      "id": "q7",
+      "question": "เมื่อเจอ meme ที่ตลกมาก:",
+      "options": [
+        { "text": "อาจไม่เข้าใจ หรือต้องให้คนอธิบาย", "scores": { "boomer": 3, "genx": 1, "millennial": 0, "genz": 0 } },
+        { "text": "เข้าใจ แต่ไม่แชร์บ่อย", "scores": { "boomer": 0, "genx": 3, "millennial": 2, "genz": 0 } },
+        { "text": "แชร์ในกลุ่มเพื่อน พร้อม caption", "scores": { "boomer": 0, "genx": 0, "millennial": 3, "genz": 1 } },
+        { "text": "แชร์ทันที หรือทำ meme ต่อ", "scores": { "boomer": 0, "genx": 0, "millennial": 0, "genz": 3 } }
+      ]
+    },
+    {
+      "id": "q8",
+      "question": "เรื่องสิ่งแวดล้อม คุณ:",
+      "options": [
+        { "text": "ทำตามที่ทำได้ ไม่ stress มาก", "scores": { "boomer": 2, "genx": 2, "millennial": 1, "genz": 0 } },
+        { "text": "สงสัยว่าบริษัท greenwash หรือเปล่า", "scores": { "boomer": 0, "genx": 3, "millennial": 1, "genz": 1 } },
+        { "text": "พยายามเลือกที่ sustainable", "scores": { "boomer": 0, "genx": 0, "millennial": 3, "genz": 1 } },
+        { "text": "พูดตรงๆ เรื่อง climate บนโซเชียล", "scores": { "boomer": 0, "genx": 0, "millennial": 1, "genz": 3 } }
+      ]
+    },
+    {
+      "id": "q9",
+      "question": "โทรศัพท์ที่คุณใช้อยู่:",
+      "options": [
+        { "text": "รุ่นที่ใช้งานได้พอ ไม่จำเป็นต้องใหม่", "scores": { "boomer": 3, "genx": 2, "millennial": 0, "genz": 0 } },
+        { "text": "เปลี่ยนเมื่อพัง ไม่ตามทุกรุ่น", "scores": { "boomer": 1, "genx": 3, "millennial": 1, "genz": 0 } },
+        { "text": "รุ่นกลางๆ ที่ครบฟีเจอร์ที่ใช้จริง", "scores": { "boomer": 0, "genx": 0, "millennial": 3, "genz": 1 } },
+        { "text": "รุ่นใหม่ กล้องดี แอปลื่น", "scores": { "boomer": 0, "genx": 0, "millennial": 0, "genz": 3 } }
+      ]
+    },
+    {
+      "id": "q10",
+      "question": "ถ้าเลือกได้ คุณอยากโตในโลกแบบไหน? (คำถามพิเศษ)",
+      "isMeta": true,
+      "weightBonus": 2,
+      "options": [
+        { "text": "โลกที่มั่นคง รู้ว่าอนาคตจะเป็นอย่างไร", "scores": { "boomer": 3, "genx": 1, "millennial": 0, "genz": 0 } },
+        { "text": "โลกที่ไม่มีใครบอกว่าต้องทำตามกฎเดิม", "scores": { "boomer": 0, "genx": 3, "millennial": 1, "genz": 0 } },
+        { "text": "โลกที่ทำงานมีความหมายและสมดุล", "scores": { "boomer": 0, "genx": 0, "millennial": 3, "genz": 0 } },
+        { "text": "โลกที่เปลี่ยนเร็วและยืดหยุ่น", "scores": { "boomer": 0, "genx": 0, "millennial": 1, "genz": 3 } }
+      ]
+    }
+  ]
+}
