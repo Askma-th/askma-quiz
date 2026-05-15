@@ -1,0 +1,763 @@
+---
+export interface Props {
+  quiz: {
+    title: string;
+    description: string;
+    emoji: string;
+    accentColor: string;
+    estimatedMinutes: number;
+    resultTypes: Array<{
+      key: string;
+      label: string;
+      title: string;
+      description: string;
+      personality: string;
+      strengths: string[];
+      cta: string;
+      shareText: string;
+    }>;
+    questions: Array<{
+      id: string;
+      question: string;
+      options: Array<{
+        text: string;
+        scores: Record<string, number>;
+      }>;
+      isMeta?: boolean;
+      weightBonus?: number;
+    }>;
+    tiebreakerOrder: string[];
+  };
+}
+
+const { quiz } = Astro.props;
+---
+
+<div class="quiz-wrap" id="quiz-wrap">
+  <!-- SCREEN 1: Start -->
+  <div class="screen" id="screen-start">
+    <div class="start-emoji">{quiz.emoji}</div>
+    <h1 class="start-title">{quiz.title}</h1>
+    <p class="start-desc">{quiz.description}</p>
+    <p class="start-meta">
+      ⏱ ประมาณ {quiz.estimatedMinutes} นาที · {quiz.questions.length} คำถาม
+    </p>
+    <button class="btn-primary" id="btn-start">เริ่มเลย →</button>
+  </div>
+
+  <!-- SCREEN 2: Question -->
+  <div class="screen hidden" id="screen-question">
+    <div class="progress-wrap">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    <p class="q-counter" id="q-counter">1 / 12</p>
+
+    <button class="btn-back hidden" id="btn-back">← ย้อนกลับ</button>
+
+    <div class="q-card">
+      <p class="q-text" id="q-text"></p>
+    </div>
+
+    <div class="options-list" id="options-list"></div>
+  </div>
+
+  <!-- SCREEN 3: Result -->
+  <div class="screen hidden" id="screen-result">
+    <div class="result-confetti" id="confetti-container"></div>
+    <div class="result-emoji" id="result-emoji"></div>
+    <p class="result-type-label" id="result-type-label"></p>
+    <h2 class="result-title" id="result-title"></h2>
+    <p class="result-personality" id="result-personality"></p>
+    <p class="result-desc" id="result-desc"></p>
+
+    <div class="strengths-list" id="strengths-list"></div>
+
+    <div class="result-cta-box" id="result-cta-box"></div>
+
+    <div class="share-row">
+      <button type="button" class="btn-share" id="btn-share-line">LINE</button>
+      <button type="button" class="btn-share" id="btn-share-fb">Facebook</button>
+      <button type="button" class="btn-share" id="btn-share-x">X</button>
+      <button type="button" class="btn-share" id="btn-share-copy">คัดลอก</button>
+    </div>
+
+    <button type="button" class="btn-restart" id="btn-restart">ทำแบบทดสอบอีกครั้ง</button>
+  </div>
+</div>
+
+<script type="application/json" id="quiz-data" set:html={JSON.stringify(quiz)} />
+
+<style is:global>
+  :root {
+    --accent: #FFD600;
+    --bg: #0a0a14;
+    --card: #1a1a28;
+    --border: #2a2a3a;
+    --text: #ffffff;
+    --text-muted: #a0a0b8;
+  }
+  :root {
+    --accent: #FFD600;
+    --bg: #0a0a14;
+    --card: #1a1a28;
+    --border: #2a2a3a;
+    --text: #ffffff;
+    --text-muted: #a0a0b8;
+  }
+
+  /* Layout */
+  .quiz-wrap {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 20px 48px;
+    max-width: 480px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .screen {
+    width: 100%;
+  }
+  .hidden {
+    display: none !important;
+  }
+
+  /* --- START SCREEN --- */
+  .start-emoji {
+    font-size: 5rem;
+    text-align: center;
+    margin: 2rem 0 1rem;
+    display: block;
+  }
+
+  .start-title {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--accent);
+    margin: 0 0 1rem;
+    line-height: 1.2;
+  }
+
+  .start-desc {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 0.5rem;
+  }
+
+  .start-meta {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin: 0 0 2.5rem;
+  }
+
+  .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    background: var(--accent);
+    color: #000;
+    border: none;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+      transform 0.15s,
+      box-shadow 0.15s;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+  }
+
+  .btn-primary:active {
+    transform: scale(0.97);
+  }
+
+  /* --- QUESTION SCREEN --- */
+  .progress-wrap {
+    width: 100%;
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+  }
+
+  .progress-bar {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 2px;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 0%;
+  }
+
+  .q-counter {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.75rem;
+  }
+
+  .btn-back {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    transition:
+      border-color 0.15s,
+      color 0.15s;
+  }
+
+  .btn-back:hover {
+    border-color: var(--text-muted);
+    color: var(--text);
+  }
+
+  .q-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 20px;
+    margin-bottom: 1.25rem;
+  }
+
+  .q-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text);
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .q-slide-in {
+    animation: slideIn 0.25s ease-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .option-btn {
+    width: 100%;
+    padding: 16px 18px;
+    background: var(--card);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: left;
+    cursor: pointer;
+    transition:
+      border-color 0.15s,
+      transform 0.1s,
+      box-shadow 0.15s,
+      background 0.15s;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+  }
+
+  .option-btn:active {
+    transform: scale(0.98);
+  }
+
+  .option-btn.selected {
+    border-color: var(--accent);
+    background: rgba(255, 214, 0, 0.08);
+    box-shadow: 0 0 0 3px rgba(255, 214, 0, 0.15);
+    color: #fff;
+    font-weight: 600;
+  }
+
+  /* --- RESULT SCREEN --- */
+  .result-confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 100;
+  }
+
+  .confetti-piece {
+    position: absolute;
+    top: -10px;
+    animation: confettiFall linear forwards;
+  }
+
+  @keyframes confettiFall {
+    0% {
+      transform: translateY(-10px) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(720deg);
+      opacity: 0;
+    }
+  }
+
+  .result-emoji {
+    font-size: 4.5rem;
+    text-align: center;
+    margin: 2rem 0 0.5rem;
+    display: block;
+    animation: bounceIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  }
+
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.15);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .result-type-label {
+    text-align: center;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 0 0 0.5rem;
+  }
+
+  .result-title {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--text);
+    margin: 0 0 0.75rem;
+  }
+
+  .result-personality {
+    text-align: center;
+    color: var(--accent);
+    font-style: italic;
+    font-size: 1.05rem;
+    margin: 0 0 1.25rem;
+  }
+
+  .result-desc {
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 0.95rem;
+    margin: 0 0 1.5rem;
+    text-align: center;
+    white-space: pre-line;
+  }
+
+  .strengths-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+  }
+
+  .strength-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  .result-cta-box {
+    background: rgba(255, 214, 0, 0.06);
+    border: 1px solid rgba(255, 214, 0, 0.2);
+    border-radius: 14px;
+    padding: 18px 20px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+    white-space: pre-line;
+  }
+
+  .share-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 1.25rem;
+  }
+
+  .btn-share {
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+      transform 0.1s,
+      border-color 0.15s;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+  }
+
+  .btn-share:active {
+    transform: scale(0.97);
+  }
+
+  .btn-share:nth-child(1) {
+    border-color: #06c755;
+    color: #06c755;
+  }
+  .btn-share:nth-child(2) {
+    border-color: #1877f2;
+    color: #1877f2;
+  }
+  .btn-share:nth-child(3) {
+    border-color: #a0a0b8;
+  }
+  .btn-share:nth-child(4) {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .btn-restart {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background: transparent;
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition:
+      border-color 0.15s,
+      color 0.15s;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+  }
+
+  .btn-restart:hover {
+    border-color: var(--text-muted);
+    color: var(--text);
+  }
+
+  @media (min-width: 600px) {
+    .quiz-wrap {
+      padding: 40px 24px 64px;
+    }
+    .start-title {
+      font-size: 2.5rem;
+    }
+    .result-title {
+      font-size: 2.4rem;
+    }
+    .q-text {
+      font-size: 1.2rem;
+    }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    const dataEl = document.getElementById('quiz-data');
+    if (!dataEl || !dataEl.textContent) return;
+
+    const quizData = JSON.parse(dataEl.textContent);
+
+    let currentIndex = 0;
+    const answers = {};
+    const history = [];
+
+    function calculateResult() {
+      const scores = {};
+      quizData.resultTypes.forEach(rt => {
+        scores[rt.key] = 0;
+      });
+
+      quizData.questions.forEach(q => {
+        const answerIdx = answers[q.id];
+        if (answerIdx === undefined) return;
+        const option = q.options[answerIdx];
+        if (!option) return;
+        const weight = q.isMeta ? (q.weightBonus ?? 1) : 1;
+        Object.entries(option.scores).forEach(([key, pts]) => {
+          if (scores[key] !== undefined) scores[key] += pts * weight;
+        });
+      });
+
+      const maxScore = Math.max(...Object.values(scores));
+      const tiedKeys = Object.keys(scores).filter(k => scores[k] === maxScore);
+
+      for (const key of quizData.tiebreakerOrder) {
+        if (tiedKeys.includes(key)) {
+          return quizData.resultTypes.find(rt => rt.key === key);
+        }
+      }
+      return quizData.resultTypes[0];
+    }
+
+    let audioCtx = null;
+
+    function getAudioCtx() {
+      if (!audioCtx) {
+        try {
+          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        } catch (e) {
+          return null;
+        }
+      }
+      return audioCtx;
+    }
+
+    function playTone(freq, duration, type = 'sine', volume = 0.15) {
+      try {
+        const ctx = getAudioCtx();
+        if (!ctx) return;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.frequency.value = freq;
+        osc.type = type;
+        gain.gain.setValueAtTime(volume, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
+        osc.start(ctx.currentTime);
+        osc.stop(ctx.currentTime + duration);
+      } catch (e) {}
+    }
+
+    const sounds = {
+      select: () => playTone(523, 0.08, 'sine', 0.12),
+      advance: () => {
+        playTone(523, 0.06, 'sine', 0.1);
+        setTimeout(() => playTone(659, 0.08, 'sine', 0.1), 60);
+      },
+      back: () => playTone(392, 0.1, 'sine', 0.1),
+      result: () => {
+        [523, 659, 784, 1047].forEach((f, i) => {
+          setTimeout(() => playTone(f, 0.2, 'sine', 0.12), i * 80);
+        });
+      },
+      copy: () => playTone(880, 0.06, 'sine', 0.1),
+    };
+
+    function showScreen(id) {
+      document.querySelectorAll('.screen').forEach(s => s.classList.add('hidden'));
+      const el = document.getElementById(id);
+      if (el) el.classList.remove('hidden');
+    }
+
+    function renderQuestion(index) {
+      const q = quizData.questions[index];
+      const total = quizData.questions.length;
+
+      const pct = (index / total) * 100;
+      const bar = document.getElementById('progress-bar');
+      if (bar) bar.style.width = pct + '%';
+      const counter = document.getElementById('q-counter');
+      if (counter) counter.textContent = `${index + 1} / ${total}`;
+
+      const btnBack = document.getElementById('btn-back');
+      if (btnBack) {
+        if (index === 0) btnBack.classList.add('hidden');
+        else btnBack.classList.remove('hidden');
+      }
+
+      const qCard = document.querySelector('.q-card');
+      if (qCard) {
+        qCard.classList.add('q-slide-in');
+        setTimeout(() => qCard.classList.remove('q-slide-in'), 300);
+      }
+      const qText = document.getElementById('q-text');
+      if (qText) qText.textContent = q.question;
+
+      const list = document.getElementById('options-list');
+      if (!list) return;
+      list.innerHTML = '';
+      q.options.forEach((opt, i) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'option-btn';
+        if (answers[q.id] === i) btn.classList.add('selected');
+        btn.textContent = opt.text;
+        btn.addEventListener('click', () => selectOption(index, i));
+        list.appendChild(btn);
+      });
+    }
+
+    function selectOption(questionIndex, optionIndex) {
+      const q = quizData.questions[questionIndex];
+      sounds.select();
+
+      document.querySelectorAll('.option-btn').forEach((btn, i) => {
+        btn.classList.toggle('selected', i === optionIndex);
+      });
+
+      answers[q.id] = optionIndex;
+
+      setTimeout(() => {
+        if (questionIndex < quizData.questions.length - 1) {
+          sounds.advance();
+          history.push(questionIndex);
+          currentIndex = questionIndex + 1;
+          renderQuestion(currentIndex);
+        } else {
+          showResult();
+        }
+      }, 400);
+    }
+
+    function goBack() {
+      if (history.length === 0) return;
+      sounds.back();
+      currentIndex = history.pop();
+      renderQuestion(currentIndex);
+    }
+
+    function launchConfetti() {
+      const container = document.getElementById('confetti-container');
+      if (!container) return;
+      container.innerHTML = '';
+      const colors = ['#FFD600', '#FF6B6B', '#4ECDC4', '#A8E6CF', '#FFD93D', '#6C5CE7'];
+      for (let i = 0; i < 60; i++) {
+        const piece = document.createElement('div');
+        piece.className = 'confetti-piece';
+        piece.style.cssText = `
+      left: ${Math.random() * 100}%;
+      background: ${colors[Math.floor(Math.random() * colors.length)]};
+      width: ${6 + Math.random() * 8}px;
+      height: ${6 + Math.random() * 8}px;
+      animation-delay: ${Math.random() * 0.8}s;
+      animation-duration: ${1.5 + Math.random() * 1}s;
+      border-radius: ${Math.random() > 0.5 ? '50%' : '2px'};
+    `;
+        container.appendChild(piece);
+      }
+      setTimeout(() => {
+        container.innerHTML = '';
+      }, 3000);
+    }
+
+    function showResult() {
+      const result = calculateResult();
+      sounds.result();
+      launchConfetti();
+
+      const emojiEl = document.getElementById('result-emoji');
+      if (emojiEl) emojiEl.textContent = result.label.split(' ')[0];
+      const labelEl = document.getElementById('result-type-label');
+      if (labelEl) labelEl.textContent = result.label;
+      const titleEl = document.getElementById('result-title');
+      if (titleEl) titleEl.textContent = result.title;
+      const persEl = document.getElementById('result-personality');
+      if (persEl) persEl.textContent = `"${result.personality}"`;
+      const descEl = document.getElementById('result-desc');
+      if (descEl) descEl.textContent = result.description;
+
+      const strengthsList = document.getElementById('strengths-list');
+      if (strengthsList) {
+        strengthsList.innerHTML = result.strengths
+          .map(s => `<div class="strength-item">${s}</div>`)
+          .join('');
+      }
+
+      const ctaBox = document.getElementById('result-cta-box');
+      if (ctaBox) ctaBox.textContent = result.cta;
+
+      const shareUrl = window.location.href;
+      const shareText = result.shareText + '\n' + shareUrl;
+
+      const btnLine = document.getElementById('btn-share-line');
+      if (btnLine) {
+        btnLine.onclick = () => {
+          window.open(
+            `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(result.shareText)}`
+          );
+        };
+      }
+      const btnFb = document.getElementById('btn-share-fb');
+      if (btnFb) {
+        btnFb.onclick = () => {
+          window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`);
+        };
+      }
+      const btnX = document.getElementById('btn-share-x');
+      if (btnX) {
+        btnX.onclick = () => {
+          window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`);
+        };
+      }
+      const btnCopy = document.getElementById('btn-share-copy');
+      if (btnCopy) {
+        btnCopy.onclick = () => {
+          navigator.clipboard.writeText(shareText).then(() => {
+            sounds.copy();
+            btnCopy.textContent = '✓ คัดลอกแล้ว!';
+            setTimeout(() => {
+              btnCopy.textContent = 'คัดลอก';
+            }, 2000);
+          });
+        };
+      }
+
+      showScreen('screen-result');
+    }
+
+    const btnStart = document.getElementById('btn-start');
+    if (btnStart) {
+      btnStart.addEventListener('click', () => {
+        getAudioCtx()?.resume?.();
+        currentIndex = 0;
+        showScreen('screen-question');
+        renderQuestion(0);
+      });
+    }
+
+    const btnBack = document.getElementById('btn-back');
+    if (btnBack) {
+      btnBack.addEventListener('click', goBack);
+    }
+
+    const btnRestart = document.getElementById('btn-restart');
+    if (btnRestart) {
+      btnRestart.addEventListener('click', () => {
+        currentIndex = 0;
+        Object.keys(answers).forEach(k => delete answers[k]);
+        history.length = 0;
+        showScreen('screen-start');
+      });
+    }
+  })();
+</script>

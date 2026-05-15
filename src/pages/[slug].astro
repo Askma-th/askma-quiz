@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../components/BaseLayout.astro';
+import QuizEngine from '../components/QuizEngine.astro';
 
 export async function getStaticPaths() {
   const quizzes = await getCollection('quizzes', ({ data }) => data.isPublished);
@@ -22,73 +23,5 @@ const { data } = quiz;
   ogImage={data.ogImage}
   accentColor={data.accentColor}
 >
-  <main class="quiz-container">
-    <header class="quiz-header">
-      <div class="emoji">{data.emoji}</div>
-      <h1>{data.title}</h1>
-      <p class="description">{data.description}</p>
-      <p class="meta">⏱ ประมาณ {data.estimatedMinutes} นาที</p>
-    </header>
-
-    <div class="quiz-stub">
-      <p>🚧 Quiz engine ยังไม่ implement</p>
-      <p>คำถามทั้งหมด: {data.questions.length} ข้อ</p>
-      <p>ผลลัพธ์: {data.resultTypes.length} แบบ</p>
-      <details>
-        <summary>Debug: View quiz data</summary>
-        <pre>{JSON.stringify(data, null, 2)}</pre>
-      </details>
-    </div>
-  </main>
-
-  <style>
-    .quiz-container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
-
-    .quiz-header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .emoji {
-      font-size: 4rem;
-      margin-bottom: 1rem;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin: 0 0 0.5rem 0;
-      color: var(--accent);
-    }
-
-    .description {
-      color: var(--text-muted);
-      margin: 0 0 1rem 0;
-    }
-
-    .meta {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
-    .quiz-stub {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    pre {
-      text-align: left;
-      background: #000;
-      padding: 1rem;
-      border-radius: 8px;
-      overflow-x: auto;
-      font-size: 0.75rem;
-    }
-  </style>
+  <QuizEngine quiz={data} client:load />
 </BaseLayout>
