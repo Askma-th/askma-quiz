@@ -89,6 +89,10 @@ const { quiz } = Astro.props;
 
     <div class="result-cta-box" id="result-cta-box"></div>
 
+    <div class="stats-container" id="stats-container">
+      <!-- Populated by JS -->
+    </div>
+
     <div class="share-row">
       <button type="button" class="btn-share" id="btn-share-line">LINE</button>
       <button type="button" class="btn-share" id="btn-share-fb">Facebook</button>
@@ -580,6 +584,46 @@ const { quiz } = Astro.props;
   .result-reveal-sequence.revealed > *:nth-child(7) { transition-delay: 0.86s; opacity: 1; transform: none; }
   .result-reveal-sequence.revealed > *:nth-child(8) { transition-delay: 0.98s; opacity: 1; transform: none; }
   .result-reveal-sequence.revealed > *:nth-child(9) { transition-delay: 1.1s; opacity: 1; transform: none; }
+  .result-reveal-sequence.revealed > *:nth-child(10) { transition-delay: 1.22s; opacity: 1; transform: none; }
+
+  .stats-container {
+    margin: 1.5rem auto 1rem;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    text-align: center;
+    max-width: 360px;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  .stats-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .stats-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .stats-pct {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--accent);
+    font-family: 'Fraunces', serif;
+  }
+  .stats-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+  .stats-total {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
 
   @media (min-width: 600px) {
     .quiz-wrap {
@@ -596,6 +640,13 @@ const { quiz } = Astro.props;
     }
   }
 </style>
+
+<script>
+  import { logCompletion, getQuizStats } from '../lib/supabase';
+  import { generateFingerprint, getReferrer } from '../lib/fingerprint';
+
+  window.__askmaQuiz = { logCompletion, getQuizStats, generateFingerprint, getReferrer };
+</script>
 
 <script is:inline>
   (function () {
@@ -919,6 +970,50 @@ const { quiz } = Astro.props;
         const seq = document.querySelector('.result-reveal-sequence');
         if (seq) seq.classList.add('revealed');
       }, 80);
+
+      (async function trackAndShowStats() {
+        let attempts = 0;
+        while (!window.__askmaQuiz && attempts < 20) {
+          await new Promise(r => setTimeout(r, 50));
+          attempts++;
+        }
+        if (!window.__askmaQuiz) return;
+
+        const { logCompletion, getQuizStats, generateFingerprint, getReferrer } = window.__askmaQuiz;
+
+        try {
+          const fingerprint = await generateFingerprint();
+          const referrer = getReferrer();
+          const quizSlug = window.location.pathname.replace(/^\/+|\/+$/g, '');
+
+          logCompletion(quizSlug, result.key, fingerprint, referrer);
+
+          setTimeout(async () => {
+            const stats = await getQuizStats(quizSlug);
+            if (!stats) return;
+            renderStats(stats, result.key);
+          }, 1500);
+        } catch (e) {
+          // silent — stats optional
+        }
+      })();
+    }
+
+    function renderStats(stats, resultKey) {
+      const container = document.getElementById('stats-container');
+      if (!container) return;
+
+      const winnerStat = stats.distribution.find(d => d.result_key === resultKey);
+      const winnerPct = winnerStat ? winnerStat.percentage : 0;
+
+      container.innerHTML = `
+        <div class="stats-row">
+          <span class="stats-pct">${winnerPct}%</span>
+          <span class="stats-label">ของคนที่ทำแล้ว ได้ผลแบบเดียวกับคุณ</span>
+        </div>
+        <div class="stats-total">${stats.total.toLocaleString()} คนทำ quiz นี้แล้ว</div>
+      `;
+      container.classList.add('visible');
     }
 
     const btnStart = document.getElementById('btn-start');
@@ -944,6 +1039,11 @@ const { quiz } = Astro.props;
         history.length = 0;
         const seq = document.querySelector('.result-reveal-sequence');
         if (seq) seq.classList.remove('revealed');
+        const statsEl = document.getElementById('stats-container');
+        if (statsEl) {
+          statsEl.innerHTML = '';
+          statsEl.classList.remove('visible');
+        }
         showScreen('screen-start');
       });
     }

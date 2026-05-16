@@ -14,8 +14,18 @@
   "theme": {
     "accentColor": "#3b82f6",
     "bgGradient": "135deg, #080e1a, #0e1a2e",
-    "ambientEmojis": ["💼", "🔬", "🎨", "🚀"],
-    "imageZoneEmojis": ["💼", "🔬", "🎨", "🚀"]
+    "ambientEmojis": [
+      "💼",
+      "🔬",
+      "🎨",
+      "🚀"
+    ],
+    "imageZoneEmojis": [
+      "💼",
+      "🔬",
+      "🎨",
+      "🚀"
+    ]
   },
   "resultTypes": [
     {
@@ -29,7 +39,7 @@
         "⚡ ตัดสินใจเร็ว — ไม่ให้ทีมค้าง",
         "👥 นำทีมได้ — คนเชื่อใจเมื่อคุณสรุป"
       ],
-      "cta": "Askma ออกแบบมาสำหรับคนที่มีความคิดเห็นชัดเจน\n\nแบบสำรวจสั้น ตอบตรง ไม่เสียเวลา\n\n💼 แสดงมุมมองของคุณได้โดยไม่ระบุตัวตน\n💰 สะสมแต้มได้ในอนาคต\n✅ PDPA Compliant",
+      "cta": "คุณตัดสินใจเก่ง — ที่ Askma ทุกความเห็นมีน้ำหนัก\n\nลองมาตอบโพลกับ Askma สิ\n\n🔐 1 คน 1 เสียง — ยืนยันตัวตนจริง + ไม่เปิดเผยตัวตน\n🎁 ทุกคำตอบ = แต้มสะสม แลกของรางวัลในอนาคต\n⭐ ยิ่งตอบมาก ยิ่งได้รางวัล + insight ที่คุณไม่เคยรู้",
       "shareText": "ฉันได้ 💼 The CEO! ตัดสินใจเร็ว นำทีม มองภาพใหญ่\nคุณล่ะเป็น Job อะไร? มาลองดูกัน!"
     },
     {
@@ -43,7 +53,7 @@
         "🧪 รอบคอบ — ลดความผิดพลาดจากการรีบ",
         "💡 แก้ปัญหาเป็นระบบ — หาสาเหตุจริงก่อนแก้"
       ],
-      "cta": "Askma ให้คุณแสดงความคิดเห็นอย่างมีเหตุผล\n\nทุกคำตอบช่วยสร้างข้อมูลที่มีคุณภาพ\n\n🔬 คำถามหลากหลาย ตอบแล้วเห็นภาพรวม\n🔒 익명 100%\n✅ PDPA Compliant",
+      "cta": "คิดด้วยข้อมูล — Askma สร้างข้อมูลที่คุณอยากเห็น\n\nลองมาตอบโพลกับ Askma สิ\n\n🔐 1 คน 1 เสียง — ยืนยันตัวตนจริง + ไม่เปิดเผยตัวตน\n🎁 ทุกคำตอบ = แต้มสะสม แลกของรางวัลในอนาคต\n⭐ ยิ่งตอบมาก ยิ่งได้รางวัล + insight ที่คุณไม่เคยรู้",
       "shareText": "ฉันได้ 🔬 The Scientist! ข้อมูลก่อนอารมณ์ คิดเป็นระบบ\nคุณล่ะเป็น Job อะไร? มาลองดูกัน!"
     },
     {
@@ -57,7 +67,7 @@
         "🎭 ปรับตัวได้ — เปลี่ยนวิธีเมื่อติดขัด",
         "💫 สร้างแรงบันดาลใจ — ทำให้คนอื่นกล้าลอง"
       ],
-      "cta": "Askma เปิดพื้นที่ให้ความคิดสร้างสรรค์\n\nไม่มีคำตอบผิด มีแค่มุมมองที่แตกต่าง\n\n🎨 แบบสำรวจหลากหลายให้ลองเล่น\n🔒 익명 — พูดตรงได้\n✅ PDPA Compliant",
+      "cta": "มองโลกต่างจากคนอื่น — มาแชร์มุมมองสร้างสรรค์\n\nลองมาตอบโพลกับ Askma สิ\n\n🔐 1 คน 1 เสียง — ยืนยันตัวตนจริง + ไม่เปิดเผยตัวตน\n🎁 ทุกคำตอบ = แต้มสะสม แลกของรางวัลในอนาคต\n⭐ ยิ่งตอบมาก ยิ่งได้รางวัล + insight ที่คุณไม่เคยรู้",
       "shareText": "ฉันได้ 🎨 The Artist! สร้างสรรค์ ไม่ยึดติดกรอบ\nคุณล่ะเป็น Job อะไร? มาลองดูกัน!"
     },
     {
@@ -71,100 +81,393 @@
         "📚 เรียนรู้เร็ว — ปรับตัวกับสิ่งใหม่ได้",
         "🌍 มองกว้าง — เชื่อมโยงโอกาสจากหลายที่"
       ],
-      "cta": "Askma มีหัวข้อใหม่ๆ ให้สำรวจตลอด\n\nเหมือนงานที่ไม่มีวันหมดไอเดีย\n\n🚀 ตอบแล้วเห็นว่าคนอื่นคิดยังไง\n💰 สะสมแต้มในอนาคต\n✅ PDPA Compliant",
+      "cta": "ชอบลองสิ่งใหม่ — Askma มีคำถามใหม่ๆ ทุกวัน\n\nลองมาตอบโพลกับ Askma สิ\n\n🔐 1 คน 1 เสียง — ยืนยันตัวตนจริง + ไม่เปิดเผยตัวตน\n🎁 ทุกคำตอบ = แต้มสะสม แลกของรางวัลในอนาคต\n⭐ ยิ่งตอบมาก ยิ่งได้รางวัล + insight ที่คุณไม่เคยรู้",
       "shareText": "ฉันได้ 🚀 The Explorer! ลองใหม่ เรียนเร็ว ไม่กลัวล้มเหลว\nคุณล่ะเป็น Job อะไร? มาลองดูกัน!"
     }
   ],
-  "tiebreakerOrder": ["ceo", "scientist", "artist", "explorer"],
+  "tiebreakerOrder": [
+    "ceo",
+    "scientist",
+    "artist",
+    "explorer"
+  ],
   "questions": [
     {
       "id": "q1",
       "question": "ได้รับโปรเจกต์ใหม่ที่ไม่เคยทำมาก่อน คุณ:",
       "options": [
-        { "text": "เรียกประชุมทีม วางเป้าและ timeline ทันที", "scores": { "ceo": 3, "scientist": 1, "artist": 0, "explorer": 1 } },
-        { "text": "รวบรวมข้อมูลและตัวอย่างก่อนเริ่ม", "scores": { "ceo": 0, "scientist": 3, "artist": 0, "explorer": 1 } },
-        { "text": "คิด concept ใหม่ๆ ว่าจะทำให้โดดเด่นยังไง", "scores": { "ceo": 1, "scientist": 0, "artist": 3, "explorer": 1 } },
-        { "text": "ลองทำ prototype เล็กๆ ก่อนเลย", "scores": { "ceo": 0, "scientist": 1, "artist": 1, "explorer": 3 } }
+        {
+          "text": "เรียกประชุมทีม วางเป้าและ timeline ทันที",
+          "scores": {
+            "ceo": 3,
+            "scientist": 1,
+            "artist": 0,
+            "explorer": 1
+          }
+        },
+        {
+          "text": "รวบรวมข้อมูลและตัวอย่างก่อนเริ่ม",
+          "scores": {
+            "ceo": 0,
+            "scientist": 3,
+            "artist": 0,
+            "explorer": 1
+          }
+        },
+        {
+          "text": "คิด concept ใหม่ๆ ว่าจะทำให้โดดเด่นยังไง",
+          "scores": {
+            "ceo": 1,
+            "scientist": 0,
+            "artist": 3,
+            "explorer": 1
+          }
+        },
+        {
+          "text": "ลองทำ prototype เล็กๆ ก่อนเลย",
+          "scores": {
+            "ceo": 0,
+            "scientist": 1,
+            "artist": 1,
+            "explorer": 3
+          }
+        }
       ]
     },
     {
       "id": "q2",
       "question": "เวลาเพื่อนร่วมงานไม่เห็นด้วยกับคุณ คุณ:",
       "options": [
-        { "text": "ฟังสั้นๆ แล้วตัดสินใจไปเลย", "scores": { "ceo": 3, "scientist": 0, "artist": 0, "explorer": 0 } },
-        { "text": "ขอข้อมูลและเหตุผลจากทุกฝ่ายก่อน", "scores": { "ceo": 0, "scientist": 3, "artist": 0, "explorer": 1 } },
-        { "text": "หาทางประนีประนอมที่ทุกคนพอใจ", "scores": { "ceo": 1, "scientist": 1, "artist": 3, "explorer": 0 } },
-        { "text": "เสนอทางเลือกที่สามที่ไม่เคยลอง", "scores": { "ceo": 0, "scientist": 0, "artist": 1, "explorer": 3 } }
+        {
+          "text": "ฟังสั้นๆ แล้วตัดสินใจไปเลย",
+          "scores": {
+            "ceo": 3,
+            "scientist": 0,
+            "artist": 0,
+            "explorer": 0
+          }
+        },
+        {
+          "text": "ขอข้อมูลและเหตุผลจากทุกฝ่ายก่อน",
+          "scores": {
+            "ceo": 0,
+            "scientist": 3,
+            "artist": 0,
+            "explorer": 1
+          }
+        },
+        {
+          "text": "หาทางประนีประนอมที่ทุกคนพอใจ",
+          "scores": {
+            "ceo": 1,
+            "scientist": 1,
+            "artist": 3,
+            "explorer": 0
+          }
+        },
+        {
+          "text": "เสนอทางเลือกที่สามที่ไม่เคยลอง",
+          "scores": {
+            "ceo": 0,
+            "scientist": 0,
+            "artist": 1,
+            "explorer": 3
+          }
+        }
       ]
     },
     {
       "id": "q3",
       "question": "deadline พรุ่งนี้ แต่งานยังไม่เสร็จ คุณ:",
       "options": [
-        { "text": "จัดลำดับความสำคัญ สั่งงานใหม่ให้ทีม", "scores": { "ceo": 3, "scientist": 1, "artist": 0, "explorer": 0 } },
-        { "text": "ทำงานที่จำเป็นที่สุดให้ครบตาม metric", "scores": { "ceo": 1, "scientist": 3, "artist": 0, "explorer": 0 } },
-        { "text": "หาวิธีส่งงานที่ยังดูดีแม้ไม่ perfect", "scores": { "ceo": 0, "scientist": 0, "artist": 3, "explorer": 1 } },
-        { "text": "ทำ overnight ลองเทคนิคใหม่ที่คิดไว้", "scores": { "ceo": 0, "scientist": 0, "artist": 1, "explorer": 3 } }
+        {
+          "text": "จัดลำดับความสำคัญ สั่งงานใหม่ให้ทีม",
+          "scores": {
+            "ceo": 3,
+            "scientist": 1,
+            "artist": 0,
+            "explorer": 0
+          }
+        },
+        {
+          "text": "ทำงานที่จำเป็นที่สุดให้ครบตาม metric",
+          "scores": {
+            "ceo": 1,
+            "scientist": 3,
+            "artist": 0,
+            "explorer": 0
+          }
+        },
+        {
+          "text": "หาวิธีส่งงานที่ยังดูดีแม้ไม่ perfect",
+          "scores": {
+            "ceo": 0,
+            "scientist": 0,
+            "artist": 3,
+            "explorer": 1
+          }
+        },
+        {
+          "text": "ทำ overnight ลองเทคนิคใหม่ที่คิดไว้",
+          "scores": {
+            "ceo": 0,
+            "scientist": 0,
+            "artist": 1,
+            "explorer": 3
+          }
+        }
       ]
     },
     {
       "id": "q4",
       "question": "การประชุมที่คุณชอบที่สุดคือ:",
       "options": [
-        { "text": "สั้น มี agenda ชัด จบด้วย action items", "scores": { "ceo": 3, "scientist": 1, "artist": 0, "explorer": 0 } },
-        { "text": "มีข้อมูลนำเสนอ อ้างอิงได้", "scores": { "ceo": 0, "scientist": 3, "artist": 0, "explorer": 0 } },
-        { "text": "brainstorm เปิดกว้าง ไม่จำกัดไอเดีย", "scores": { "ceo": 0, "scientist": 0, "artist": 3, "explorer": 2 } },
-        { "text": "แชร์ประสบการณ์ล่าสุดที่เพิ่งลองมา", "scores": { "ceo": 1, "scientist": 0, "artist": 1, "explorer": 3 } }
+        {
+          "text": "สั้น มี agenda ชัด จบด้วย action items",
+          "scores": {
+            "ceo": 3,
+            "scientist": 1,
+            "artist": 0,
+            "explorer": 0
+          }
+        },
+        {
+          "text": "มีข้อมูลนำเสนอ อ้างอิงได้",
+          "scores": {
+            "ceo": 0,
+            "scientist": 3,
+            "artist": 0,
+            "explorer": 0
+          }
+        },
+        {
+          "text": "brainstorm เปิดกว้าง ไม่จำกัดไอเดีย",
+          "scores": {
+            "ceo": 0,
+            "scientist": 0,
+            "artist": 3,
+            "explorer": 2
+          }
+        },
+        {
+          "text": "แชร์ประสบการณ์ล่าสุดที่เพิ่งลองมา",
+          "scores": {
+            "ceo": 1,
+            "scientist": 0,
+            "artist": 1,
+            "explorer": 3
+          }
+        }
       ]
     },
     {
       "id": "q5",
       "question": "เมื่อต้องเลือกระหว่างความเร็วกับความสมบูรณ์:",
       "options": [
-        { "text": "เร็วก่อน ปรับทีหลังได้", "scores": { "ceo": 3, "scientist": 0, "artist": 1, "explorer": 2 } },
-        { "text": "ต้องถูกต้องก่อนส่ง", "scores": { "ceo": 0, "scientist": 3, "artist": 0, "explorer": 0 } },
-        { "text": "ขึ้นกับว่าผลงานต้องสวยแค่ไหน", "scores": { "ceo": 0, "scientist": 0, "artist": 3, "explorer": 1 } },
-        { "text": "ลองเวอร์ชันเร็วก่อน แล้ว iterate", "scores": { "ceo": 1, "scientist": 1, "artist": 1, "explorer": 3 } }
+        {
+          "text": "เร็วก่อน ปรับทีหลังได้",
+          "scores": {
+            "ceo": 3,
+            "scientist": 0,
+            "artist": 1,
+            "explorer": 2
+          }
+        },
+        {
+          "text": "ต้องถูกต้องก่อนส่ง",
+          "scores": {
+            "ceo": 0,
+            "scientist": 3,
+            "artist": 0,
+            "explorer": 0
+          }
+        },
+        {
+          "text": "ขึ้นกับว่าผลงานต้องสวยแค่ไหน",
+          "scores": {
+            "ceo": 0,
+            "scientist": 0,
+            "artist": 3,
+            "explorer": 1
+          }
+        },
+        {
+          "text": "ลองเวอร์ชันเร็วก่อน แล้ว iterate",
+          "scores": {
+            "ceo": 1,
+            "scientist": 1,
+            "artist": 1,
+            "explorer": 3
+          }
+        }
       ]
     },
     {
       "id": "q6",
       "question": "สิ่งที่ทำให้คุณมีแรงจูงใจในงานมากที่สุด:",
       "options": [
-        { "text": "เห็นผลลัพธ์ชัด ทีมเดินหน้าได้", "scores": { "ceo": 3, "scientist": 1, "artist": 0, "explorer": 0 } },
-        { "text": "เข้าใจปัญหาลึกขึ้น แก้ได้จริง", "scores": { "ceo": 0, "scientist": 3, "artist": 0, "explorer": 1 } },
-        { "text": "ได้สร้างอะไรที่คนเห็นแล้ว wow", "scores": { "ceo": 0, "scientist": 0, "artist": 3, "explorer": 1 } },
-        { "text": "ได้ลองสิ่งที่ไม่เคยทำ", "scores": { "ceo": 0, "scientist": 0, "artist": 1, "explorer": 3 } }
+        {
+          "text": "เห็นผลลัพธ์ชัด ทีมเดินหน้าได้",
+          "scores": {
+            "ceo": 3,
+            "scientist": 1,
+            "artist": 0,
+            "explorer": 0
+          }
+        },
+        {
+          "text": "เข้าใจปัญหาลึกขึ้น แก้ได้จริง",
+          "scores": {
+            "ceo": 0,
+            "scientist": 3,
+            "artist": 0,
+            "explorer": 1
+          }
+        },
+        {
+          "text": "ได้สร้างอะไรที่คนเห็นแล้ว wow",
+          "scores": {
+            "ceo": 0,
+            "scientist": 0,
+            "artist": 3,
+            "explorer": 1
+          }
+        },
+        {
+          "text": "ได้ลองสิ่งที่ไม่เคยทำ",
+          "scores": {
+            "ceo": 0,
+            "scientist": 0,
+            "artist": 1,
+            "explorer": 3
+          }
+        }
       ]
     },
     {
       "id": "q7",
       "question": "เจอ process เก่าที่ทำงานช้า คุณ:",
       "options": [
-        { "text": "สั่งเปลี่ยน process ทันที", "scores": { "ceo": 3, "scientist": 0, "artist": 0, "explorer": 1 } },
-        { "text": "วัดผลก่อนว่าช้าตรงไหน", "scores": { "ceo": 0, "scientist": 3, "artist": 0, "explorer": 0 } },
-        { "text": "ออกแบบ workflow ใหม่ที่สวยและใช้ง่าย", "scores": { "ceo": 0, "scientist": 0, "artist": 3, "explorer": 1 } },
-        { "text": "ทดลอง tool หรือวิธีใหม่เองก่อน", "scores": { "ceo": 1, "scientist": 1, "artist": 1, "explorer": 3 } }
+        {
+          "text": "สั่งเปลี่ยน process ทันที",
+          "scores": {
+            "ceo": 3,
+            "scientist": 0,
+            "artist": 0,
+            "explorer": 1
+          }
+        },
+        {
+          "text": "วัดผลก่อนว่าช้าตรงไหน",
+          "scores": {
+            "ceo": 0,
+            "scientist": 3,
+            "artist": 0,
+            "explorer": 0
+          }
+        },
+        {
+          "text": "ออกแบบ workflow ใหม่ที่สวยและใช้ง่าย",
+          "scores": {
+            "ceo": 0,
+            "scientist": 0,
+            "artist": 3,
+            "explorer": 1
+          }
+        },
+        {
+          "text": "ทดลอง tool หรือวิธีใหม่เองก่อน",
+          "scores": {
+            "ceo": 1,
+            "scientist": 1,
+            "artist": 1,
+            "explorer": 3
+          }
+        }
       ]
     },
     {
       "id": "q8",
       "question": "ในกลุ่มงานกลุ่ม คุณมักเป็น:",
       "options": [
-        { "text": "คนที่สรุปและปิดงาน", "scores": { "ceo": 3, "scientist": 1, "artist": 0, "explorer": 0 } },
-        { "text": "คนที่ตรวจสอบความถูกต้อง", "scores": { "ceo": 0, "scientist": 3, "artist": 0, "explorer": 0 } },
-        { "text": "คนที่เสนอ presentation หรือดีไซน์", "scores": { "ceo": 0, "scientist": 0, "artist": 3, "explorer": 1 } },
-        { "text": "คนที่หา resource หรือแนวทางใหม่", "scores": { "ceo": 1, "scientist": 0, "artist": 1, "explorer": 3 } }
+        {
+          "text": "คนที่สรุปและปิดงาน",
+          "scores": {
+            "ceo": 3,
+            "scientist": 1,
+            "artist": 0,
+            "explorer": 0
+          }
+        },
+        {
+          "text": "คนที่ตรวจสอบความถูกต้อง",
+          "scores": {
+            "ceo": 0,
+            "scientist": 3,
+            "artist": 0,
+            "explorer": 0
+          }
+        },
+        {
+          "text": "คนที่เสนอ presentation หรือดีไซน์",
+          "scores": {
+            "ceo": 0,
+            "scientist": 0,
+            "artist": 3,
+            "explorer": 1
+          }
+        },
+        {
+          "text": "คนที่หา resource หรือแนวทางใหม่",
+          "scores": {
+            "ceo": 1,
+            "scientist": 0,
+            "artist": 1,
+            "explorer": 3
+          }
+        }
       ]
     },
     {
       "id": "q9",
       "question": "ถ้าได้เลือกทักษะเพิ่มหนึ่งอย่างฟรีๆ:",
       "options": [
-        { "text": "การเจรจาและบริหารทีม", "scores": { "ceo": 3, "scientist": 0, "artist": 0, "explorer": 1 } },
-        { "text": "การวิเคราะห์ข้อมูลเชิงลึก", "scores": { "ceo": 0, "scientist": 3, "artist": 0, "explorer": 0 } },
-        { "text": "การออกแบบและ storytelling", "scores": { "ceo": 0, "scientist": 0, "artist": 3, "explorer": 1 } },
-        { "text": "เทคโนโลยีใหม่ๆ ที่กำลังมาแรง", "scores": { "ceo": 0, "scientist": 1, "artist": 1, "explorer": 3 } }
+        {
+          "text": "การเจรจาและบริหารทีม",
+          "scores": {
+            "ceo": 3,
+            "scientist": 0,
+            "artist": 0,
+            "explorer": 1
+          }
+        },
+        {
+          "text": "การวิเคราะห์ข้อมูลเชิงลึก",
+          "scores": {
+            "ceo": 0,
+            "scientist": 3,
+            "artist": 0,
+            "explorer": 0
+          }
+        },
+        {
+          "text": "การออกแบบและ storytelling",
+          "scores": {
+            "ceo": 0,
+            "scientist": 0,
+            "artist": 3,
+            "explorer": 1
+          }
+        },
+        {
+          "text": "เทคโนโลยีใหม่ๆ ที่กำลังมาแรง",
+          "scores": {
+            "ceo": 0,
+            "scientist": 1,
+            "artist": 1,
+            "explorer": 3
+          }
+        }
       ]
     },
     {
@@ -173,10 +476,42 @@
       "isMeta": true,
       "weightBonus": 2,
       "options": [
-        { "text": "ผู้นำที่พาทีมไปถึงเป้า", "scores": { "ceo": 3, "scientist": 0, "artist": 0, "explorer": 0 } },
-        { "text": "ผู้เชี่ยวชาญที่คนพึ่งพาเมื่อติดปัญหา", "scores": { "ceo": 0, "scientist": 3, "artist": 0, "explorer": 0 } },
-        { "text": "ครีเอเตอร์ที่สร้างผลงานจำได้", "scores": { "ceo": 0, "scientist": 0, "artist": 3, "explorer": 1 } },
-        { "text": "นักสำรวจที่เปิดทางใหม่เสมอ", "scores": { "ceo": 0, "scientist": 0, "artist": 1, "explorer": 3 } }
+        {
+          "text": "ผู้นำที่พาทีมไปถึงเป้า",
+          "scores": {
+            "ceo": 3,
+            "scientist": 0,
+            "artist": 0,
+            "explorer": 0
+          }
+        },
+        {
+          "text": "ผู้เชี่ยวชาญที่คนพึ่งพาเมื่อติดปัญหา",
+          "scores": {
+            "ceo": 0,
+            "scientist": 3,
+            "artist": 0,
+            "explorer": 0
+          }
+        },
+        {
+          "text": "ครีเอเตอร์ที่สร้างผลงานจำได้",
+          "scores": {
+            "ceo": 0,
+            "scientist": 0,
+            "artist": 3,
+            "explorer": 1
+          }
+        },
+        {
+          "text": "นักสำรวจที่เปิดทางใหม่เสมอ",
+          "scores": {
+            "ceo": 0,
+            "scientist": 0,
+            "artist": 1,
+            "explorer": 3
+          }
+        }
       ]
     }
   ]
