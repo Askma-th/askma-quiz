@@ -26,3 +26,6 @@ pnpm-debug.log*
 .idea/
 *.swp
 .env
+
+# Twemoji cache (OG generator)
+scripts/.twemoji-cache/

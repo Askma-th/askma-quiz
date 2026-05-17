@@ -6,7 +6,12 @@ const quizzes = (await getCollection('quizzes', ({ data }) => data.isPublished))
   .sort((a, b) => new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime());
 ---
 
-<BaseLayout title="Askma Quiz — คอลเลกชั่นแบบทดสอบ" description="คอลเลกชั่นแบบทดสอบสไตล์ Askma">
+<BaseLayout
+  title="Askma Quiz — แบบทดสอบสนุกๆ ค้นพบตัวเองใน 2 นาที"
+  description="คอลเลกชั่นแบบทดสอบสไตล์ Askma สนุก รวดเร็ว แชร์ผลให้เพื่อน คุณเป็นสัตว์อะไร? เครื่องดื่มแบบไหน? Travel style ไหน?"
+  ogImage="/og/hub.png"
+  canonicalUrl="/"
+>
   <div class="hub-wrap">
     <div class="hub-header">
       <h1 class="hub-title">Askma Quiz</h1>
