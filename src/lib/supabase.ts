@@ -74,3 +74,117 @@ export async function getTrendingQuiz(): Promise<string | null> {
     return null;
   }
 }
+
+// ===== Admin Dashboard Functions =====
+
+export interface AdminOverview {
+  totalCompletions: number;
+  uniqueQuizzes: number;
+  last24h: number;
+  last7d: number;
+}
+
+export interface QuizBreakdown {
+  quizSlug: string;
+  total: number;
+  results: { resultKey: string; count: number; percentage: number }[];
+}
+
+export interface RecentCompletion {
+  quizSlug: string;
+  resultKey: string;
+  fingerprint: string;
+  referrer: string | null;
+  createdAt: string;
+}
+
+export async function getAdminOverview(): Promise<AdminOverview | null> {
+  try {
+    const now = new Date();
+    const day = new Date(now.getTime() - 24 * 60 * 60 * 1000).toISOString();
+    const week = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000).toISOString();
+
+    const { count: total } = await supabase
+      .from('quiz_completions')
+      .select('*', { count: 'exact', head: true });
+
+    const { count: c24 } = await supabase
+      .from('quiz_completions')
+      .select('*', { count: 'exact', head: true })
+      .gte('created_at', day);
+
+    const { count: c7 } = await supabase
+      .from('quiz_completions')
+      .select('*', { count: 'exact', head: true })
+      .gte('created_at', week);
+
+    const { data: slugs } = await supabase
+      .from('quiz_completions')
+      .select('quiz_slug');
+    const uniqueQuizzes = new Set((slugs ?? []).map(r => r.quiz_slug)).size;
+
+    return {
+      totalCompletions: total ?? 0,
+      uniqueQuizzes,
+      last24h: c24 ?? 0,
+      last7d: c7 ?? 0,
+    };
+  } catch (e) {
+    console.error('[admin] getAdminOverview error', e);
+    return null;
+  }
+}
+
+export async function getAllQuizBreakdowns(): Promise<QuizBreakdown[]> {
+  try {
+    const { data, error } = await supabase
+      .from('quiz_completions')
+      .select('quiz_slug, result_key');
+    if (error || !data) return [];
+
+    const map = new Map<string, Map<string, number>>();
+    for (const row of data) {
+      if (!map.has(row.quiz_slug)) map.set(row.quiz_slug, new Map());
+      const inner = map.get(row.quiz_slug)!;
+      inner.set(row.result_key, (inner.get(row.result_key) ?? 0) + 1);
+    }
+
+    const result: QuizBreakdown[] = [];
+    for (const [quizSlug, inner] of map.entries()) {
+      const total = Array.from(inner.values()).reduce((a, b) => a + b, 0);
+      const results = Array.from(inner.entries())
+        .map(([resultKey, count]) => ({
+          resultKey,
+          count,
+          percentage: total > 0 ? Math.round((count / total) * 100) : 0,
+        }))
+        .sort((a, b) => b.count - a.count);
+      result.push({ quizSlug, total, results });
+    }
+    return result.sort((a, b) => b.total - a.total);
+  } catch (e) {
+    console.error('[admin] getAllQuizBreakdowns error', e);
+    return [];
+  }
+}
+
+export async function getRecentCompletions(limit = 30): Promise<RecentCompletion[]> {
+  try {
+    const { data, error } = await supabase
+      .from('quiz_completions')
+      .select('quiz_slug, result_key, fingerprint, referrer, created_at')
+      .order('created_at', { ascending: false })
+      .limit(limit);
+    if (error || !data) return [];
+    return data.map(r => ({
+      quizSlug: r.quiz_slug,
+      resultKey: r.result_key,
+      fingerprint: r.fingerprint,
+      referrer: r.referrer,
+      createdAt: r.created_at,
+    }));
+  } catch (e) {
+    console.error('[admin] getRecentCompletions error', e);
+    return [];
+  }
+}
