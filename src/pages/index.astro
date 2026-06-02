@@ -22,9 +22,10 @@ const quizzes = (await getCollection('quizzes', ({ data }) => data.isPublished))
         const slug = quiz.id.replace(/\.json$/, '');
         const accent = quiz.data.theme?.accentColor || '#FFD600';
         return (
-          <a href={`/${slug}`} class="hub-card" style={`--card-accent: ${accent};`}>
+          <a href={`/${slug}`} class="hub-card" data-slug={slug} style={`--card-accent: ${accent};`}>
             <div class="hub-card-image" style={`background: linear-gradient(${quiz.data.theme?.bgGradient || '135deg, #0d0d1a, #1a1a28'});`}>
               <span class="hub-card-emoji">{quiz.data.emoji}</span>
+              <span class="trending-badge" style="display:none;">🔥 มาแรง</span>
             </div>
             <div class="hub-card-body">
               <p class="hub-card-title">{quiz.data.title}</p>
@@ -79,10 +80,25 @@ const quizzes = (await getCollection('quizzes', ({ data }) => data.isPublished))
     box-shadow: 0 8px 24px rgba(0,0,0,0.3);
   }
   .hub-card-image {
+    position: relative;
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .trending-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(135deg, #ff6b35, #ef4444);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
+    z-index: 2;
+    white-space: nowrap;
   }
   .hub-card-emoji {
     font-size: 3.5rem;
@@ -104,3 +120,19 @@ const quizzes = (await getCollection('quizzes', ({ data }) => data.isPublished))
     margin: 0;
   }
 </style>
+
+<script>
+  import { getTrendingQuiz } from '../lib/supabase';
+
+  async function highlightTrending() {
+    const trendingSlug = await getTrendingQuiz();
+    if (!trendingSlug) return;
+    const card = document.querySelector(`.hub-card[data-slug="${trendingSlug}"]`);
+    if (card) {
+      const badge = card.querySelector('.trending-badge') as HTMLElement | null;
+      if (badge) badge.style.display = 'inline-block';
+    }
+  }
+
+  highlightTrending();
+</script>
