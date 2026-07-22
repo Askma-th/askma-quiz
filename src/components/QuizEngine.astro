@@ -774,6 +774,10 @@ const { quiz } = Astro.props;
       const q = quizData.questions[index];
       const total = quizData.questions.length;
 
+      // hard-reset any leftover selection/focus from the previous question
+      document.querySelectorAll('.option-btn.selected').forEach(b => b.classList.remove('selected'));
+      if (document.activeElement?.blur) document.activeElement.blur();
+
       const pct = (index / total) * 100;
       document.getElementById('progress-bar').style.width = pct + '%';
       const animalEl = document.getElementById('progress-animal');
