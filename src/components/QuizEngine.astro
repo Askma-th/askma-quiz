@@ -354,10 +354,12 @@ const { quiz } = Astro.props;
     transform: translateY(10px);
   }
 
-  .option-btn:hover:not(.selected) {
-    border-color: rgba(255, 214, 0, 0.35);
-    transform: translateX(3px);
-    background: rgba(255,255,255,0.02);
+  @media (hover: hover) and (pointer: fine) {
+    .option-btn:hover:not(.selected) {
+      border-color: rgba(255, 214, 0, 0.35);
+      transform: translateX(3px);
+      background: rgba(255,255,255,0.02);
+    }
   }
 
   .option-btn:active { transform: scale(0.98); }
