@@ -53,6 +53,19 @@ const fullCanonical = canonicalUrl
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={fullOgImage} />
 
+    {import.meta.env.PROD && (
+      <>
+        <!-- Google Analytics 4 -->
+        <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-T7JS51JD60"></script>
+        <script is:inline>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-T7JS51JD60', { anonymize_ip: true });
+        </script>
+      </>
+    )}
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
